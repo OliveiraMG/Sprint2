@@ -1,3 +1,4 @@
+
 *{
     padding: 0%;
     margin: 0%;
@@ -5,9 +6,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body::-webkit-scrollbar-track{
+    background-color: #380E72; 
+}
+body::-webkit-scrollbar{
+    width: 10px;   
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #f3f3f3;   
+}
+
 body{
-    background-color: #FFFFFF;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -18,7 +32,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    margin-top: 10px;
+    background-color: transparent;
 }
 
 .logonavbar{
@@ -54,7 +68,7 @@ body{
 }
 
 ul a{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 14px;
     width: 100%;
@@ -65,65 +79,47 @@ ul a{
 }
 
 ul a:hover{
-    background-color: #500c841e;
-    border-radius: 10px;
+    border-bottom: solid 1px white;
 }
-
-select{
-    margin-left: 20px;
-    height: 30px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-    text-align: center;
-
-}
-
-select:hover{
-    background-color: #500c841e;
-    border-radius: 10px 10px 0 0;
-}
-
 
 .header .fakebutton{
     width: 127px;
     height: 28px;
     background-color: transparent;
-    border: solid 2px #4F0C84;
-    color: #4F0C84;
-    border-radius: 5px;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-
-.header .fakebutton{
     text-decoration: none;
-    
 }
 
 .header .fakebutton:hover{
-    background-color:#4F0C84;
-    color: whitesmoke;
+    border-bottom: solid 1px white; 
+}
+
+.buttonslogcad{
+    width: 21%;
+    display: flex;    
 }
 
 .block{
-    height: 600px;
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(180deg, #380E72, #1A023E);
+    border-radius: 0px 0px 180px 0px;
 }
 
 .bground{
-    height: 570px;
+    height: 560px;
     width: 95%;
-    background-image: linear-gradient(45deg, #380E72, #1A023E);
-    border-radius: 30px 30px 180px 30px;
     padding: 0 50px;
     display: flex;
-
 }
 
 .infb2{
@@ -152,7 +148,6 @@ select:hover{
 .infb2 .fakebutton{
     width: 176px;
     height: 38px;
-    color: #F02EF1;
     background-color: transparent;
     margin-bottom: 80px;
     display: flex;
@@ -174,7 +169,7 @@ select:hover{
 
 }
 
-.infb2 .fakebutton a:hover{
+.fakebutton a:hover{
     width: 100%;
     height: 100%;
     color:#f12ef196;
@@ -187,6 +182,19 @@ select:hover{
 
 }
 
+.bground img{
+    height: 600px;
+    width: 600px;    
+}
+
+.contatenos{
+    position: fixed;
+    height: 70px;
+    margin:20% 0% 0% 46%;
+    cursor: pointer;
+    
+}
+
 .b2{
     height: 550px;
     width: 100%;
@@ -195,6 +203,7 @@ select:hover{
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+    background-color: white;
 }
 
 .text01{
@@ -219,10 +228,11 @@ select:hover{
 }
 
 .container .caixas{
+    background-color: whitesmoke;
     height: 300px;
     width: 230px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px 5px #4747470c;
+    box-shadow: 0px 0px 10px 5px #380e721e;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +251,7 @@ select:hover{
 }
 
 .b3{
-    background-color: #c0c0c071;
+    background-color: #dddddd;
     height: 800px;
     width: 100%;
     display: flex;
@@ -294,6 +304,22 @@ select:hover{
     align-items: center;
 }
 
+.campimage .sens{
+    height: 300px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campimage .datac{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .detalhe{
     height: 10%;
     width: 10%;
@@ -308,6 +334,7 @@ select:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 }
 
 .title4{
@@ -368,4 +395,51 @@ select:hover{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.952);
 }
+
+
+.donw1{
+    height: 50px;
+    width: 50px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    transform: rotate(90deg);
+    box-shadow: 0px 0px 10px 5px #4f4f4f4c;
+
+}
+
+.donw2{
+    height: 60px;
+    width: 60px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    transform: rotate(90deg);
+
+}
+
+.donw3{
+    height: 60px;
+    width: 60px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    transform: rotate(90deg);
+}
+
 
