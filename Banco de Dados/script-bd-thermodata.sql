@@ -109,5 +109,19 @@ on fkEmpresa= idEmpresa;
 select * from empresa join dataCenter
 on fkEmpresa=idEmpresa;
 
-select * from dataCenter join sensor 
-on fkDatacenter=idSensor;
+select * from dataCenter  left join sensor 
+on fkDatacenter=idDatacenter;
+
+select * from  metrica join sensor on
+fkSensor=idSensor;
+
+select m.temperaturaAtual as TemperaturaAtual,
+                          s.tempIdealMinima as temperaturaIdealMinima,
+                          s.tempIdealMaxima as temperaturaIdealMaxima
+                          from metrica as m join
+                              sensor as s 
+                              on m.fkSensor=s.idSensor;
+                              
+                              
+                              
+                              
