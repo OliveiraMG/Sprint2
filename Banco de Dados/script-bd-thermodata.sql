@@ -34,24 +34,30 @@ constraint fkEmpresa foreign key(fkEmpresa) references empresa(idEmpresa),
 qtdHacks varchar(45),
 tier char(6),
 localDt varchar(45),
-primary key(idDatacenter,fkEmpresa)
+primary key(idDatacenter)
 );
 
 create table sensor (
 idSensor int,
 fkDatacenter int,
 constraint fkDatacenter foreign key(fkDatacenter) references dataCenter(idDatacenter),
-fkEmpresa int,
-foreign key(fkEmpresa) references empresa(idEmpresa),
-primary key (idSensor,fkDatacenter,fkEmpresa),
-temp decimal(10,1),
-umidade decimal(5,2)
+primary key (idSensor),
+tempIDealMinima float,
+tempIDealMaxima float,
+umidadeIdeal float
 );
-
+create table metrica (
+idMetrica int auto_increment,
+temperaturaAtual float,
+umidadeAtual float,
+dtHora datetime,
+fkSensor int,
+foreign key (fkSensor) references sensor(idSensor),
+primary key (idMetrica,fkSensor)
+);
 alter table usuario add constraint chkEmail check (email LIKE '%@%.%');
-alter table usuario add constraint chkSenha check (senha like '%!%' or '%.%' or '%@%' or '%$%' or '%*%' or '%&%');
+alter table usuario add constraint chkSenha check (senha like '%!%' or senha like'%.%' or senha like '%@%' or senha like '%$%' or senha like '%*%' or senha like '%&%');
  
-select * from usuario;
  
 insert into empresa values 
  (null,'Sptech','10921092313',null,'paulista','09876543','são paulo','são paulo'),
@@ -68,15 +74,40 @@ insert into usuario values
 (2,2,'Roberto','Silva', 'rosilva@outlook.com','11983457231','rSilva','senha45!',1),
 (3,2,'Marta','Silva', 'marta@outlook.com','11983259573','MartaSilva','Password1!',1);
 
-desc dataCenter;
+
 insert into dataCenter values
 (1,1,'4 hacks','tier 2','São Paulo'),
-(1,2,'10 hacks','tier 3','Hortolândia'),
-(2,2,'8 hacks','tier 3','Piracicaba');
+(2,2,'10 hacks','tier 3','Hortolândia'),
+(3,2,'8 hacks','tier 3','Piracicaba');
 
 insert into sensor values
-(1,1,1,28.5,45),
-(2,1,1,27.8,47),
-(1,2,2,25.5,50),
-(1,1,2,22.5,64);
+(1,1,19.8,25.6,45),
+(2,1,21,26.8,47),
+(3,2,21.9,25.5,50),
+(4,2,22.5,27,54);
 
+insert into metrica values
+(null,27,50,'2022-10-05 09:38:22',1),
+(null,25.8,48,'2022-10-05 09:40:22',1),
+(null,25.6,48.8,'2022-10-05 09:42:22',1),
+(null,24.2,44.2,'2022-12-08 07:35:10',2),
+(null,24.5,44.5,'2022-12-08 07:40:10',2),
+(null,19.5,54.4,'2022-10-05 09:45:00',3),
+(null,14,62.4,'2022-10-05 10:00:00',3),
+(null,22.3,48.6,'2022-10-08 15:40:18',4),
+(null,28.7,49,'2022-10-08 15:44:18',4);
+
+select * from empresa;
+select * from usuario;
+select * from dataCenter;
+select * from sensor;
+select * from metrica;
+
+select * from empresa join usuario 
+on fkEmpresa= idEmpresa;
+
+select * from empresa join dataCenter
+on fkEmpresa=idEmpresa;
+
+select * from dataCenter join sensor 
+on fkDatacenter=idSensor;
