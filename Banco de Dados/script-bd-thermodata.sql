@@ -124,4 +124,11 @@ select m.temperaturaAtual as TemperaturaAtual,
                               
                               
                               
-                              
+select empresa.nome,
+         dataCenter.tier,
+			 sensor.tempIdealMaxima,
+                   metrica.temperaturaAtual
+                     from metrica join sensor
+                     on metrica.fkSensor=sensor.idSensor
+                     join dataCenter on sensor.fkDatacenter=dataCenter.idDatacenter
+                     join empresa on dataCenter.fkEmpresa=empresa.idEmpresa;
