@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #380E72;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f3f3f3;
+}
+
+body {
+    background-color: #070012;
+}
+
+.container {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+
+}
+
+.form {
+    background-color: white;
+    height: 400px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 4px 0 0 4px;
+}
+
+
+.tr {
+    background-color: transparent;
+    width: 30%;
+    background-color:#5e07cf;
+    background-image: url(../assets/BG_LOGIN.png);
+    background-size: cover;
+    background-position: -14rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.form h2{
+    margin-bottom: 1rem;
+}
+
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 1rem;
+
+}
+
+label {
+    margin-bottom: .5rem;
+    font-size: 14px
+}
+
+input, button {
+    border: none;
+    padding: .4rem;
+    border-radius: 8px;
+    outline: 1px solid black;
+    transition: .1s ease;
+}
+
+input:focus{
+    outline: 1px solid #380E72;
+}
+
+
+button{
+    width: 80%;
+    background-color: #4600a7;
+    color: white;
+    margin: 1rem 0;
+}
+
+button:hover{
+    background-color: #2c0069;
+    cursor: pointer;;
+}
+
+span{
+    font-size: 10px;
+}
+
+span a{
+    text-decoration: none;
+    color: #2c0069;
+}
+
+span a:hover{
+    color: #4000ca;
+}
