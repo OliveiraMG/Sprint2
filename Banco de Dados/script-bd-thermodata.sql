@@ -134,3 +134,4 @@ select empresa.nome,
 select metrica.temperaturaAtual , metrica.umidadeAtual,metrica.dtHora,
        sensor.idSensor,sensor.tempIdealMaxima,sensor.umidadeIdeal 
        FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;
+       
