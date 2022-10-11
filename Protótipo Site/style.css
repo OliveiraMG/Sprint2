@@ -32,7 +32,10 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    background-color: transparent;
+    background-color:#380E72 ;
+    position: fixed;
+    left: 0px;
+    top: 0px;
 }
 
 .logonavbar{
