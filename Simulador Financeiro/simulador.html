@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+    <div class="simulador">
+        Quantos racks sua empresa tem ? <br>
+        <input type="text" id="in_qtdRacks"> <br>
+        Selecione o tier do seu Data Center: <br>
+        <select name="" id="sel_tiers">
+            <option value=""> -- </option>
+            <option value="1">Tier 1</option>
+            <option value="2">Tier 2</option>
+            <option value="3">Tier 3</option>
+            <option value="4">Tier 4</option>
+        </select> <br>
+        <button onclick="economizar()">Simular</button>
+        <div id="div_resultado"></div>
+    </div>
+</body>
+</html>
+<script>
+    function economizar() {
+        var qtdRacks = Number(in_qtdRacks.value);
+        var tier = sel_tiers.value;
+        
+        if (qtdRacks != 0) {
+            if (tier == 1 || tier == 2 || tier == 3 || tier == 4) {
+                var qtdArduino = Math.ceil(qtdRacks / 6);
+                var conta1 = 8750 * tier;
+                var conta2 = (8750 * 5.21) * tier;
+
+                div_resultado.innerHTML = `Utilizaremos ${qtdArduino} Arduino (capacidade de até ${qtdArduino * 6} sensores DHT-11) para monitorar a temperatura e umidade dos seus racks. <br>
+                Um downtime pode causar em média um custo de U$9000 até mais de U$100000, com equipamento, manutenção, recuperação de dados, dito isso com nosso monitoramento, você pode economizar mais de U$${conta1.toFixed(2)}/ R$${conta2.toFixed(2)} por downtime evitando a perda de dados e hardware.`
+
+            } else {
+                alert("Insira um tier para podermos fazer a simulação")
+            }
+        } else {
+            alert("Insira uma quantidade de Racks para podermos fazer a simulação")
+        }
+    }
+</script>

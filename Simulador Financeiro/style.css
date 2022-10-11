@@ -1,0 +1,14 @@
+* {
+    font-family: sans-serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+.simulador {
+    margin: 10px;
+    background-color: blueviolet;
+}
