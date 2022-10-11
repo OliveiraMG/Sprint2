@@ -112,8 +112,6 @@ on fkEmpresa=idEmpresa;
 select * from dataCenter  left join sensor 
 on fkDatacenter=idDatacenter;
 
-select * from  metrica join sensor on
-fkSensor=idSensor;
 
 select m.temperaturaAtual as TemperaturaAtual,
                           s.tempIdealMinima as temperaturaIdealMinima,
@@ -122,7 +120,7 @@ select m.temperaturaAtual as TemperaturaAtual,
                               sensor as s 
                               on m.fkSensor=s.idSensor;
                               
-                              
+						
                               
 select empresa.nome,
          dataCenter.tier,
@@ -132,3 +130,8 @@ select empresa.nome,
                      on metrica.fkSensor=sensor.idSensor
                      join dataCenter on sensor.fkDatacenter=dataCenter.idDatacenter
                      join empresa on dataCenter.fkEmpresa=empresa.idEmpresa;
+                     
+select metrica.temperaturaAtual , metrica.umidadeAtual,metrica.dtHora,
+       sensor.idSensor,sensor.tempIdealMaxima,sensor.umidadeIdeal 
+       FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;
+       
