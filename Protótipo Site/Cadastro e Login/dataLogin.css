@@ -21,15 +21,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    background-color: #070012;
+    height: 100vh;
+    background-image: url(../assets/BG_LOGIN.png);
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    overflow-y: hidden;
 }
 
 .container {
-    
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
 
 }
 
@@ -41,7 +44,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px rgba(27, 27, 27, 0.651);
     border-radius: 4px 0 0 4px;
 }
 
