@@ -95,17 +95,17 @@ input:focus{
 
 
 
-
 button{
     width: 80%;
     background-color: #4600a7;
-    color: white;
     margin: 1rem 0;
+    color: white;
 }
+
 
 button:hover{
     background-color: #2c0069;
-    cursor: pointer;;
+    cursor: pointer;
 }
 
 span{
@@ -115,6 +115,7 @@ span{
 span a{
     text-decoration: none;
     color: #2c0069;
+    font-weight: bold;
 }
 
 span a:hover{
