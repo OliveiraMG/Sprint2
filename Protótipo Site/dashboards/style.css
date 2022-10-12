@@ -2,20 +2,21 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
     height: 100vh;
     width: 100vw;
-    padding: 0px 2%;
     background-color: rgb(230, 230, 230);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .box1{
     height: 90%;
-    width: 10%;
+    width: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +24,7 @@ body{
 
 .cbar{
     height: 95%;
-    width: 50%;
+    width: 100%;
     background-color: #1B0140;
     border-radius: 80px;
     display: flex;
@@ -41,6 +42,14 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+.list a {
+    width: 100%;
+    text-align: center;
+}
+
+.list a:hover {
+    border-left: solid 3px white;
+}
 
 .cbar ion-icon {
     color: white;
@@ -50,13 +59,7 @@ body{
     cursor: pointer;
 }
 
-.cbar ion-icon:hover{
-    background-color:  #2a065dba;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px 10px   #2a065dba;
-}
+
 
 .box2{
     height: 90%;
@@ -64,11 +67,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: start;
+    padding-left: 10px;
 }
 
 .mincbar{
     height: 28%;
-    width: 60%;
+    width: 70%;
     background-color: #1B0140;
     border-radius: 80px;
     display: flex;
@@ -86,13 +90,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
+
+}
+
+.options a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .options ion-icon{
     color: white;
     font-size: 20px;
-    cursor: pointer;
 }
 
 .box3{
@@ -124,7 +138,6 @@ body{
     align-items: center;
     justify-content: center;
     
-
 }
 
 .graphic2{

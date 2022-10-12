@@ -1,47 +1,183 @@
-.box3{
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/BG_LOGIN.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box3 {
     height: 90%;
     width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 
-.graphic1{
+.graphic1,
+.graphic2 {
     height: 45%;
     width: 100%;
-    background-color: white;
+    background-image: url(../assets/Abstract-Triangle-PNG-Transparent-Image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.graphic1 {
+    flex-direction: row-reverse;
+}
+
+.blur{
+    backdrop-filter: blur(100px);
+    position: absolute;
+    z-index:0;
+    height: 100%;
+    width: 100%;
     
+}
 
+.grafico {
+    height: 98%;
+    width: 77%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ 
+}
+
+.tm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 100%;
+    padding: 40px;
 }
 
 
 
-.mingraphic1 , .mingraphic2 {
+.ping {
+    height: 95%;
+    width: 20%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+.ping1green,.ping2green,.ping1red,.ping2red,.ping1yellow,.ping2yellow{
+    height: 18%;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(68, 68, 68, 0.485);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ping1red{
+    border-left:solid 5px red;
+    
+}
+.ping1yellow{
+    border-left:solid 5px rgb(234, 255, 0);
+    
+}
+.ping1green{
+    border-left:solid 5px green;
+    
+}
+
+.ping2red{
+    border-right:solid 5px red;
+    
+}
+.ping2yellow{
+    border-right:solid 5px rgb(234, 255, 0);
+    
+}
+.ping2green{
+    border-right:solid 5px green;
+    
+}
+
+
+.mingraphic1,
+.mingraphic2 {
+    box-shadow: none;
     background-color: transparent;
-    box-shadow:none;
+    border: none;
 
 }
 
 
-.blockup{
-    background-color:white;
+.blockup {
+    background-image: url(../assets/Abstract-Triangle-PNG-Transparent-Image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: white;
     width: 100%;
     height: 60%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
 
-.blockdown{
+
+.blur2{
+    backdrop-filter: blur(100px);
+    position: absolute;
+    z-index:0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.graficomin1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10%;
+    margin: bottom 7px;
+}
+
+
+
+
+
+.blockdown {
     background-color: transparent;
     width: 100%;
     height: 35%;
@@ -52,7 +188,7 @@
 
 }
 
-.conts{
+.conts {
     background-color: white;
     width: 48%;
     height: 90px;
