@@ -8,24 +8,42 @@
     <title>Simulador Financeiro</title>
 </head>
 <body>
+    <!-- Início do Simulador -->
     <div class="simulador">
-        Quantos racks sua empresa tem ? <br>
-        <input type="text" id="in_qtdRacks"> <br>
-        Selecione o tier do seu Data Center: <br>
-        <select name="" id="sel_tiers">
-            <option value=""> -- </option>
-            <option value="1">Tier 1</option>
-            <option value="2">Tier 2</option>
-            <option value="3">Tier 3</option>
-            <option value="4">Tier 4</option>
-        </select> <br>
-        <button onclick="economizar()">Simular</button>
-        <div id="div_resultado"></div>
+
+        <!-- Caixa da esquerda -->
+        <div class="box_e">
+            <div class="simule">
+                <h2>SIMULE</h2>
+                <label for="racks">Quantos racks sua empresa tem ?</label>
+                <input type="number" id="in_qtdRacks"> <br>
+                <label for="tier">Selecione o tier do seu Data Center:</label>
+                <select name="" id="sel_tiers">
+                    <option value=""> -- </option>
+                    <option value="1">Tier 1</option>
+                    <option value="2">Tier 2</option>
+                    <option value="3">Tier 3</option>
+                    <option value="4">Tier 4</option>
+                </select> <br>
+                <button onclick="economizar()">Simular</button>
+            </div>
+        </div>
+        
+        <!-- Caixa Direita -->
+        <div class="box_d">
+            <div class="resultado">
+                <p id="p_resultado">
+                    <p></p>
+            </div>
+        </div>
+        
     </div>
+    <!-- Fim do Simulador -->
 </body>
 </html>
 <script>
     function economizar() {
+        p_resultado.innerHTML = ""
         var qtdRacks = Number(in_qtdRacks.value);
         var tier = sel_tiers.value;
         
@@ -35,8 +53,8 @@
                 var conta1 = 8750 * tier;
                 var conta2 = (8750 * 5.21) * tier;
 
-                div_resultado.innerHTML = `Utilizaremos ${qtdArduino} Arduino (capacidade de até ${qtdArduino * 6} sensores DHT-11) para monitorar a temperatura e umidade dos seus racks. <br>
-                Um downtime pode causar em média um custo de U$9000 até mais de U$100000, com equipamento, manutenção, recuperação de dados, dito isso com nosso monitoramento, você pode economizar mais de U$${conta1.toFixed(2)}/ R$${conta2.toFixed(2)} por downtime evitando a perda de dados e hardware.`
+                p_resultado.innerHTML = `Utilizaremos ${qtdArduino} Arduino(s) (capacidade de até ${qtdArduino * 6} sensores DHT-11) para monitorar a temperatura e umidade dos seus racks. <br>
+                Um downtime pode causar em média um custo de <span class= "destaque">U$9000</span> até mais de <span class="destaque">U$100000</span>, com equipamento, manutenção, recuperação de dados, dito isso com nosso monitoramento, você pode economizar mais de <span class="destaque">U$${conta1.toFixed(2)}/ R$${conta2.toFixed(2)}</span> por downtime evitando a perda de dados e hardware.`
 
             } else {
                 alert("Insira um tier para podermos fazer a simulação")
