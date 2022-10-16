@@ -22,12 +22,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    height: 100vh;
+    height: 113vh;
     background-color: #140030;
     background-image: url(../assets/BG_LOGIN.png);
     background-size: cover;
     backdrop-filter: blur(8px);
-    overflow-y: hidden;
 }
 
 .header {
@@ -62,7 +61,6 @@ body {
     height: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     list-style: none;
 }
 
@@ -215,7 +213,6 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.952);
     padding: 70px 0;
-    margin-top: 3rem;
 }
 
 .row{
