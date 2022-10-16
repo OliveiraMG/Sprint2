@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+/*  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oxanium', sans-serif;
 
 }
 
@@ -29,12 +30,94 @@ body {
     overflow-y: hidden;
 }
 
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #350c74;
+    padding: 0px 50px;
+    left: 0px;
+    top: 0px;
+}
+
+.logonavbar {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.logonavbar img {
+    width: 90px;
+
+
+}
+
+.logonavbar ul {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.logonavbar ul li {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logonavbar ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    width: 130%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul a:hover {
+    
+    border-bottom: solid 1px white;
+}
+
+.header .fakebutton {
+    width: 127px;
+    height: 28px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .fakebutton:hover {
+    border-bottom: solid 1px white;
+}
+
+.buttonslogcad {
+    width: 21%;
+    display: flex;
+}
+
+
+
 .container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .form {
@@ -47,6 +130,7 @@ body {
     align-items: center;
     box-shadow: 1px 1px 10px rgba(27, 27, 27, 0.651);
     border-radius: 4px 0 0 4px;
+    margin-bottom: 120px;
 }
 
 
@@ -120,4 +204,115 @@ span a{
 
 span a:hover{
     color: #4000ca;
+}
+
+
+
+
+
+footer {
+    height: 230px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.952);
+    padding: 70px 0;
+    margin-top: 3rem;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #ffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #4F0C84;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s eases;
+    border: none;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+ }
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0 ;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a{
+    color: #4F0C84;
+    background-color: #ffffff;
+}
+
+
+.donw1 {
+    height: 50px;
+    width: 50px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    box-shadow: 0px 0px 10px 5px #4f4f4f4c;
+
+}
+
+.donw1 ion-icon{
+    height: 30px;
+    width: 30px;
 }

@@ -19,13 +19,30 @@
 <body>
 
 
-    <div class="container">
-        <div class="form">
-            <h2>LOGIN</h2>
-            <div class="campo">
-                <label for="email">Email</label>
-                <input type="text" name="" id="email" placeholder="email@email.com">
+    <div class="block">
+        <div class="header">
+            <div class="logonavbar">
+                <img src="assets/thermi.png" alt="">
+                <ul>
+                    <li> <a href="/index.html">HOME</a></li>
+                    <li> <a href="#quemPosicao">QUEM SOMOS</a></li>
+                    <li> <a href="#servicoP"> SERVIÇO </a></li>
+                    <li> <a href="/Simulador Financeiro/simulador.html">SIMULE</a></li>
+                </ul>
             </div>
+            <div class="buttonslogcad">
+                <a class="fakebutton" href="#">LOGIN</a>
+                <a class="fakebutton" href="dataCadastro.html">CADASTRE-SE</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="form">
+                <h2>LOGIN</h2>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="text" name="" id="email" placeholder="email@email.com">
+                </div>
                 <div class="campo">
                     <label for="password">Senha:</label>
                     <input type="password" id="password" placeholder="********">
@@ -33,20 +50,68 @@
                 <button onclick="validar()">Entrar</button>
                 <span> Ainda não se cadastrou? <a href="dataCadastro.html">Clique aqui</a> </span>
 
+            </div>
+            <div class="form tr">
+            </div>
         </div>
-        <div class="form tr">
-        </div>
-    </div>
 
 
-    <!-- FOOTER -->
+        <!-- FOOTER -->
 
-    <div class="footer">
-        <div class="container">
-            <p>Desenvolvimento pela Thermodata - &copy; copyright </p>
-        </div>
-    </div>
-
+   
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+    
+                    <div class="footer-col">
+                        <h4> Recursos </h4>
+                        <ul>
+                            <li><a href="#"> Aplicação </a> </li>
+                            <li><a href="#"> Documentação </a> </li>
+                            <li><a href="#"> Sistemas </a> </li>
+                            <li><a href="#"> FAQ </a> </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4> Companhia </h4>
+                        <ul>
+                            <li><a href="#"> Sobre Nós </a> </li>
+                            <li><a href="#"> Blog </a> </li>
+                            <li><a href="#"> Parcerias </a> </li>
+                            <li><a href="#"> Carreiras </a> </li>
+    
+                        </ul>
+                    </div>
+    
+    
+                    <div class="footer-col">
+                        <h4> Redes Sociais </h4>
+                        <ul>
+                            <li><a href="#"> Whatsapp </a> </li>
+                            <li><a href="#"> Instagram </a> </li>
+                            <li><a href="#"> Facebook </a> </li>
+                            <li><a href="#"> Email </a> </li>
+                        </ul>
+                    </div>
+    
+    
+                    <div class="footer-col">
+                        <h4> Redes Sociais </h4>
+                        <div class="social-links">
+                            <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                            <a href="#"> <i class="fab fa-instagram"></i> </a>
+                            <a href="#"> <i class="fab fa-whatsapp"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            </div>
+    
+            </div>
+        </footer>
 
 </body>
 
@@ -55,8 +120,8 @@
 
 <script>
 
-function validar(){
-    window.location.href = "../dashboards/dashprincipal.html";
-}
+    function validar() {
+        window.location.href = "../dashboards/dashprincipal.html";
+    }
 
 </script>

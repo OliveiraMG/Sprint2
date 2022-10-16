@@ -5,16 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icon" type="image/x-icon">
+
     <title>Thermodata</title>
 </head>
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="dataCadastro.css">
-<title>Site Institucional</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dataCadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title> ThermoData Cadastro</title>
 
 <body>
+
+    <div class="header">
+        <div class="logonavbar">
+            <img src="assets/thermi.png" alt="">
+            <ul>
+                <li> <a href="/index.html">HOME</a></li>
+                <li> <a href="/Simulador Financeiro/simulador.html">SIMULE</a></li>
+            </ul>
+        </div>
+        <div class="buttonslogcad">
+            <a class="fakebutton" href="dataLogin.html">LOGIN</a>
+            <a class="fakebutton" href="#">CADASTRE-SE</a>
+        </div>
+    </div>
+
 
     <div class="container">
         <div id="form" class="form">
@@ -63,7 +81,7 @@
                 <div class="campo">
                     <button onclick="user()">Registre-se</button>
                 </div>
-                    
+
 
             </div>
 
@@ -76,18 +94,65 @@
 
     <!-- FOOTER -->
 
-    <div class="footer">
-        <div class="container">
-            <p>Desenvolvimento pela Thermodata - &copy; copyright </p>
-        </div>
-    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
 
+                <div class="footer-col">
+                    <h4> Recursos </h4>
+                    <ul>
+                        <li><a href="#"> Aplicação </a> </li>
+                        <li><a href="#"> Documentação </a> </li>
+                        <li><a href="#"> Sistemas </a> </li>
+                        <li><a href="#"> FAQ </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Companhia </h4>
+                    <ul>
+                        <li><a href="#"> Sobre Nós </a> </li>
+                        <li><a href="#"> Blog </a> </li>
+                        <li><a href="#"> Parcerias </a> </li>
+                        <li><a href="#"> Carreiras </a> </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4> Redes Sociais </h4>
+                    <ul>
+                        <li><a href="#"> Whatsapp </a> </li>
+                        <li><a href="#"> Instagram </a> </li>
+                        <li><a href="#"> Facebook </a> </li>
+                        <li><a href="#"> Email </a> </li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4> Redes Sociais </h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#"> <i class="fab fa-whatsapp"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
+
+        </div>
+    </footer>
 
 </body>
 
 </html>
 <script>
-    function user(){
+    function user() {
         form.innerHTML = " EM MANUNTENÇÃO "
     }
 </script>
