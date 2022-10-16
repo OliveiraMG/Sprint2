@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Poppins;
+    src: local(Poppins),url(../assets/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+    font-family: "Poppins";
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 10%;
+    padding-left: 25%;
+    background-color: rgb(149, 149, 149);
+    overflow: hidden;
+}
+
+.simulador {
+    display: flex;
+    align-items: center;
+    justify-content: cen;
+    width: 710px;
+    height: 406px;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+/* Caixa da esquerda */
+.simulador .box_e {
+    width: 357px;
+    height: 406px;
+    background: linear-gradient(180deg, #380E72, #1A023E);
+    filter: drop-shadow(5px 2px 5px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.box_e .simule {
+    color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.simule h2 {
+    text-align: center;
+    padding-bottom: 12%;
+    padding-top: 5%;
+}
+
+.simule label{
+    font-family: Poppins;
+    font-style: bolder;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+.simule input {
+    cursor: pointer;
+    width: 252px;
+    height: 31px;
+    background: #D9D9D9;
+    border-radius: 21px;
+    border: #D9D9D9;
+    text-align: center;
+    appearance: none;
+}
+
+.simule input:hover {
+    background-color: #cecece;
+}
+
+.simule select {
+    cursor: pointer;
+    width: 252px;
+    height: 31px;
+    background: #D9D9D9;
+    border-radius: 21px;
+    border: #D9D9D9;
+    text-align: center;
+}
+
+.simule select:hover {
+    background-color: #cecece;
+}
+
+.simule button {
+    cursor: pointer;
+    width: 177px;
+    height: 45px;
+    border-radius: 19px;
+    border: #D9D9D9;
+    font-style: bolder;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5E228C;
+    background-color: #d9d9d9;
+}
+
+.simule button:hover {
+    background-color: #9747FF;
+    color: #D9D9D9;
+}
+
+/* Caixa da direita */
+
+.simulador .box_d {
+    width: 289px;
+    height: 304px;
+    margin-top: 0 auto;
+    margin-bottom: 70px;
+    margin-left: 30px;
+    margin-right: 18px;
+    font-weight: 600;
+    text-align: start;
+    
+}
+
+.destaque {
+    color: #6b1ca8;
+    font-weight: bolder;
+    cursor: pointer;
+}
