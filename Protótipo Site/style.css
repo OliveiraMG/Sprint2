@@ -449,27 +449,42 @@ ul a:hover {
 }
 
 .V{
-    background-image: url("/assets/vinicius.jpeg");
+    background-image: url("assets/vinicius.jpeg");
     background-size: cover;
     background-position-y: -1rem;
 }
 
 .M{
-    background-image: url("/assets/marcus.jfif");
+    background-image: url("assets/marcus.jfif");
     background-size: cover;
     background-position-y: -1rem;
 }
 
 .MO{
-    background-image: url("/assets/oliveira.jpeg");
+    background-image: url("assets/oliveira.jpeg");
     background-size: cover;
     background-position-y: -3.5rem;
 }
 
+.G{
+    background-image: url("assets/gi.jpg");
+    background-size: cover;
+    
+    
+}
+
 
 .S{
-    background-image: url("/assets/samuel.jpg");
+    background-image: url("assets/samuel.jpg");
     background-size: cover;
+}
+
+
+.C{
+    background-image: url("assets/cesar.jpg");
+    background-size: cover;
+    background-position-y: -1.5rem;
+
 }
 
 
