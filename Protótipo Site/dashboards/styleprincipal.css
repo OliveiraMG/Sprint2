@@ -1,12 +1,11 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url(../assets/BG_LOGIN.png);
+    background-color: rgba(248, 248, 248, 0.809);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(20px);
-    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,12 +25,13 @@ body {
 .graphic2 {
     height: 45%;
     width: 100%;
-    background-image: url(../assets/Abstract-Triangle-PNG-Transparent-Image.png);
+    background-color: #8a8a8a2e;
+    backdrop-filter: blur(10px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    box-shadow: 0px 0px 10px 1px rgba(44, 44, 44, 0.455);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -41,7 +41,11 @@ body {
 }
 
 .graphic1 {
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+}
+
+.graphic2 {
+    flex-direction: column;
 }
 
 .blur{
@@ -54,7 +58,7 @@ body {
 }
 
 .grafico {
-    height: 98%;
+    height: 70%;
     width: 77%;
     display: flex;
     align-items: center;
@@ -69,27 +73,27 @@ body {
     justify-content: center;
     height: 50%;
     width: 100%;
-    padding: 40px;
+    padding: 90px;
 }
 
 
 
-.ping {
-    height: 95%;
-    width: 20%;
-    border-radius: 20px;
+.ping { 
+    height: 20%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     position: relative;
+    color: white;
 
 }
 
 .ping1green,.ping2green,.ping1red,.ping2red,.ping1yellow,.ping2yellow{
-    height: 18%;
-    width: 90%;
-    background-color: rgb(255, 255, 255);
+    height: 90%;
+    width: 18%;
+    background-color: rgba(37, 37, 37, 0.318);
+    backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px 1px rgba(68, 68, 68, 0.485);
     border-radius: 10px;
     display: flex;
@@ -134,11 +138,11 @@ body {
 
 
 .blockup {
-    background-image: url(../assets/Abstract-Triangle-PNG-Transparent-Image.png);
+    background-color: #1B0140;
+    backdrop-filter: blur(10px);
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-    background-color: white;
     width: 100%;
     height: 60%;
     border-radius: 20px;
@@ -189,7 +193,8 @@ body {
 }
 
 .conts {
-    background-color: white;
+    background-color: rgba(37, 37, 37, 0.318);
+    backdrop-filter: blur(10px);
     width: 48%;
     height: 90px;
     border-radius: 20px;

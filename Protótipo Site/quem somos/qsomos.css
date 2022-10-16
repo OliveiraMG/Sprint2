@@ -17,18 +17,18 @@ body::-webkit-scrollbar-thumb{
 }
 
 body{
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     
 }
 
 .header{
     width: 100%;
     height:60px ;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
@@ -102,4 +102,49 @@ ul a:hover{
 .buttonslogcad{
     width: 21%;
     display: flex;    
+}
+
+
+
+
+.containerqs{
+    background-color: #092eff;
+    margin-top: 5%;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.containerqs img{
+    margin-top: 50px;
+}
+
+.blockscontqs{
+height: 80%;
+width: 48%;
+padding: 3%;
+}
+
+.blockscontqs p{
+    color: whitesmoke;
+}
+
+.titlecontqs{
+    position: absolute;
+    top: -40px;
+    height: 15%;
+    width: 20%;
+    background-color: rgb(64, 159, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.titlecontqs p {
+    font-size: 30px;
+    font-weight: bold;
 }
