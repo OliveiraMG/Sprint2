@@ -15,7 +15,7 @@ body {
     height: 98%;
     width: 85%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 
 }
@@ -58,12 +58,14 @@ body {
 }
 
 .grafico {
-    height: 100%;
-    width: 100%;
+    margin-top: 13rem;
+    margin-right: 15rem;
+    margin-bottom: 8rem;
+    height: 80%;
+    width: 85%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    position: absolute;
+    align-self: flex-end;
 
  
 }
