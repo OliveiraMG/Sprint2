@@ -40,13 +40,14 @@
                 <h2>LOGIN</h2>
                 <div class="campo">
                     <label for="email">Email</label>
-                    <input type="text" name="" id="email" placeholder="email@email.com">
+                    <input type="text" name="" id="in_email" placeholder="email@email.com">
                 </div>
                 <div class="campo">
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" placeholder="********">
+                    <input type="password" id="in_password" placeholder="********">
                 </div>
                 <button onclick="validar()">Entrar</button>
+                <div id="div_result"></div><br>
                 <span> Ainda não se cadastrou? <a href="dataCadastro.html">Clique aqui</a> </span>
 
             </div>
@@ -57,11 +58,11 @@
 
         <!-- FOOTER -->
 
-   
+
         <footer class="footer">
             <div class="footer-container">
                 <div class="row">
-    
+
                     <div class="footer-col">
                         <h4> Recursos </h4>
                         <ul>
@@ -71,7 +72,7 @@
                             <li><a href="#"> FAQ </a> </li>
                         </ul>
                     </div>
-    
+
                     <div class="footer-col">
                         <h4> Companhia </h4>
                         <ul>
@@ -79,11 +80,11 @@
                             <li><a href="#"> Blog </a> </li>
                             <li><a href="#"> Parcerias </a> </li>
                             <li><a href="#"> Carreiras </a> </li>
-    
+
                         </ul>
                     </div>
-    
-    
+
+
                     <div class="footer-col">
                         <h4> Redes Sociais </h4>
                         <ul>
@@ -93,8 +94,8 @@
                             <li><a href="#"> Email </a> </li>
                         </ul>
                     </div>
-    
-    
+
+
                     <div class="footer-col">
                         <h4> Redes Sociais </h4>
                         <div class="social-links">
@@ -105,12 +106,12 @@
                     </div>
                 </div>
             </div>
-            </div>
-    
-            </div>
-    
-            </div>
-        </footer>
+    </div>
+
+    </div>
+
+    </div>
+    </footer>
 
 </body>
 
@@ -120,7 +121,25 @@
 <script>
 
     function validar() {
-        window.location.href = "../dashboards/dashprincipal.html";
+
+        var email = in_email.value
+        var password = in_password.value
+
+        if (email == 'adimin@gmail.com' && password == 'adimin123') {
+
+            window.location.href = "../dashboards/dashprincipal.html";
+
+        } else {
+
+            div_result.innerHTML = `<span style="color: red">Email ou senha incorretos</span>`
+
+        }
+
+        if (email == '' || password == '') {
+
+            div_result.innerHTML = `<span style="color: red">Há algum campo vazio</span>`
+
+        }
     }
 
 </script>
