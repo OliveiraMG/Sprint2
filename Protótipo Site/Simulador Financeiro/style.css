@@ -489,6 +489,7 @@ ul a:hover {
 
 
 .footer {
+    margin-top: 4rem;
     height: 250px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.952);
