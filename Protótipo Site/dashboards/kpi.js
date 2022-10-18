@@ -50,3 +50,16 @@ function mudarkpi() {
 
 // ANIMAÇÃO VALORES 
 
+
+function fechar(){
+    var x = document.querySelector(".bluralert");
+    x.style.display = 'none'
+    
+}
+
+function abrir(){
+    var x = document.querySelector(".bluralert");
+    x.style.display = 'flex'
+    
+}
+
