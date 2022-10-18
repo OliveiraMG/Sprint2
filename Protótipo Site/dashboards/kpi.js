@@ -1,14 +1,37 @@
 function mudarkpi() {
     setInterval(() => {
+        setTimeout(() => {
+            tempreal.innerHTML=`22.6°C`
+        }, 2000);
+        setTimeout(() => {
+            tempreal.innerHTML=`22.8°C`
+        }, 4000);
+        setTimeout(() => {
+            tempreal.innerHTML=`23.2°C`
+        }, 6000);
+        setTimeout(() => {
+            tempreal.innerHTML=`23.1°C`
+        }, 8000);
+        setTimeout(() => {
+            tempreal.innerHTML=`22.7°C`
+        }, 10000);
+        setTimeout(() => {
+            tempreal.innerHTML=`22.6°C`
+        }, 5000);
+    }, 8000);
+    setInterval(() => {
 
         setTimeout(() => {
-            p1.innerHTML = `18.0º`
-            p2.innerHTML = `19.5º`
-            p3.innerHTML = `22.5º`
-            p4.innerHTML = `25.5º`
-            p5.innerHTML = `27.0º`
+            p1.innerHTML = `18.0°C`
+            p2.innerHTML = `19.5°C`
+            p3.innerHTML = `22.5°C`
+            
+            p4.innerHTML = `25.5°C`
+            p5.innerHTML = `27.0°C`
 
         }, 0);
+
+        
 
         setTimeout(() => {
             p1.innerHTML = `46%`
@@ -26,4 +49,17 @@ function mudarkpi() {
 }
 
 // ANIMAÇÃO VALORES 
+
+
+function fechar(){
+    var x = document.querySelector(".bluralert");
+    x.style.display = 'none'
+    
+}
+
+function abrir(){
+    var x = document.querySelector(".bluralert");
+    x.style.display = 'flex'
+    
+}
 

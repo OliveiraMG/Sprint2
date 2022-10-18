@@ -180,7 +180,7 @@ margin-top: 12%;
     font-weight: bold;
 }  
 
-.Temp{
+.Temp, #tempreal{
     color: rgba(255, 128, 0, 0.99);
 }
 .Umid{
@@ -225,10 +225,11 @@ margin-top: 12%;
 }
 
 .conts p {
-    color: #1B0140;
+    color: rgba(0, 157, 255, 0.99);
     font-size: 35px;
     font-weight: bold;
 }
+
 
 .mingraphic1 {
     height: 75%;
@@ -246,3 +247,4 @@ margin-top: 12%;
 
     }
 }
+
