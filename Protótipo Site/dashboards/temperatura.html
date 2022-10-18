@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="box1">
@@ -18,9 +20,7 @@
                 <a href="../index.html">
                     <ion-icon name="home-outline"></ion-icon>
                 </a>
-                <a href="../quem somos/quemsomos.html">
-                    <ion-icon name="chatbox-outline"></ion-icon>
-                </a>
+
                 <a href="../Simulador Financeiro/simulador.html">
                     <ion-icon name="cube-outline"></ion-icon>
                 </a>
@@ -38,15 +38,19 @@
         </div>
         <div class="mincbar">
             <div class="options">
-                <ion-icon  name="thermometer-outline"></ion-icon>
+                <ion-icon name="thermometer-outline"></ion-icon>
             </div>
 
             <div class="options">
-                <a href="dashprincipal.html"><ion-icon name="analytics-outline"></ion-icon></a>
+                <a href="dashprincipal.html">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                </a>
             </div>
 
             <div class="options">
-              <a href="umidade.html"><ion-icon name="water-outline"></ion-icon></a>
+                <a href="umidade.html">
+                    <ion-icon name="water-outline"></ion-icon>
+                </a>
             </div>
         </div>
     </div>
@@ -58,7 +62,7 @@
             </div>
 
             <div class="graphic2">
-              <canvas id="graficoTemp2"></canvas>
+                <canvas id="graficoTemp2"></canvas>
             </div>
         </div>
 
@@ -72,16 +76,19 @@
             <div class="alert">
                 <ion-icon name="close-outline" onclick="fechar()"></ion-icon>
                 <div class="areabutonssensores">
-                    <div class="butsensores"><p>Sensor 1</p></div>
-                    <div class="butsensores"><p>Sensor 2</p></div>
+                    <button class="butsensores" onclick="">Sensor 1</button>
+                    <button class="butsensores" onclick="">Sensor 5</button>
                 </div>
+                
             </div>
         </div>
     </div>
+    </div>
 
-    
+
 
 </body>
+
 </html>
 
 <script src="graficoTemp.js"></script>
