@@ -1,14 +1,14 @@
 // Gráficos Dashboard Principal
 const horarioPrin = [
-    '08:00:00',
-    '08:15:00',
-    '08:30:00',
-    '08:45:00',
-    '09:00:00',
-    '09:15:00',
-    '09:30:00',
-    '09:45:00',
-    '10:00:00',
+    'Sensor 1',
+    'Sensor 2',
+    'Sensor 3',
+    'Sensor 4',
+    'Sensor 5',
+    'Sensor 6',
+    'Sensor 7',
+    'Sensor 8',
+    'Sensor 9',
   ];
 
   const dataPrin = {
@@ -27,9 +27,12 @@ const horarioPrin = [
   };
 
   const configPrin = {
-    type: 'line',
+    type: 'bar',
     data: dataPrin,
-    options: {}
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+    }
   };
 
   const myChart = new Chart(
