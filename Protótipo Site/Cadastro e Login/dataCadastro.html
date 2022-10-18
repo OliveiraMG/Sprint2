@@ -10,12 +10,12 @@
     <title>Thermodata</title>
 </head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dataCadastro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title> ThermoData Cadastro</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="dataCadastro.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<title> ThermoData Cadastro</title>
 
 <body>
 
@@ -23,8 +23,8 @@
         <div class="logonavbar">
             <img src="assets/thermi.png" alt="">
             <ul>
-                    <li> <a href="../index.html">HOME</a></li>
-                    <li> <a href="../Simulador Financeiro/simulador.html">SIMULE</a></li>
+                <li> <a href="../index.html">HOME</a></li>
+                <li> <a href="../Simulador Financeiro/simulador.html">SIMULE</a></li>
             </ul>
         </div>
         <div class="buttonslogcad">
@@ -177,6 +177,18 @@
 </html>
 <script>
     function user() {
-        form.innerHTML = " EM MANUNTENÇÃO "
+        var nome = nome_empresa.value 
+        var cnpj = cnpj_empresa.value 
+        var logradouro = logradouro_empresa.value 
+        var bairro = bairro_empresa.value 
+        var cidade = cidade_empresa.value 
+        var estado_empresa = estado.value 
+        var telefone_empresa = telefone.value 
+        var email_empresa = email.value 
+        var senha_empresa = senha.value 
+        var senhaCF_empresa = senhaCF.value 
+        if (nome == '' || cnpj == '' || logradouro == '' || bairro == '' || cidade == '' || estado_empresa == '' || telefone_empresa == '' || email_empresa == '' || senha_empresa == '' || senhaCF_empresa == '') {
+             alert('Nenhum dos campos pode estar vazio') } 
+             else { window.location.href = "../Cadastro e Login/dataLogin.html" }
     }
 </script>
