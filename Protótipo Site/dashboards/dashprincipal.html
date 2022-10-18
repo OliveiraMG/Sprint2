@@ -40,6 +40,11 @@
     </div>
 
     <div class="box2">
+        <div class="search" onclick="escolhersensor()">
+            <div class="options">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </div>
         <div class="mincbar">
             <div class="options">
                 <a href="temperatura.html">
@@ -66,23 +71,23 @@
             <div class="graphic1">
                 <div class="blur"></div>
 
-
+                
 
                 <div class="ping">
                     <div class="ping1red">
-                        <p id="p1"> 18.0º</p>
+                        <p id="p1"> 18.0°C</p>
                     </div>
                     <div class="ping1yellow">
-                        <p id="p2">19.5º</p>
+                        <p id="p2">19.5°C</p>
                     </div>
                     <div class="ping1green">
-                        <p id="p3">22.5º</p>
+                        <p id="p3">22.5°C</p>
                     </div>
                     <div class="ping1yellow">
-                        <p id="p4">25.5º</p>
+                        <p id="p4">25.5°C</p>
                     </div>
                     <div class="ping1red">
-                        <p id="p5">27.0º</p>
+                        <p id="p5">27.0°C</p>
                     </div>
                 </div>
 
@@ -97,23 +102,45 @@
                     <div class="blockup">
                         <div class="parametry T">
                             <p>Temperatura</p>
-                            <p class="parametrybold Temp"><ion-icon name="thermometer-outline"></ion-icon> 17.1º <br><ion-icon name="thermometer-outline"></ion-icon> 22.7º</p>
+                            <p class="parametrybold Temp">
+                                <ion-icon name="thermometer-outline"></ion-icon> 17.1°C <br>
+                                <ion-icon name="thermometer-outline"></ion-icon> 22.7°C
+                            </p>
                         </div>
+
+
                         <div class="parametry D">
                             <p>Umidade</p>
-                            <p class="parametrybold Umid"><ion-icon name="water-outline"></ion-icon> 46.8%  <br><ion-icon name="water-outline"></ion-icon> 49.8%</p>
+                            <p class="parametrybold Umid">
+                                <ion-icon name="water-outline"></ion-icon> 46.8% <br>
+                                <ion-icon name="water-outline"></ion-icon> 49.8%
+                            </p>
                         </div>
                     </div>
 
                     <div class="blockdown">
                         <div class="conts">
-                            <p>22.5º</p>
+                            <p id="tempreal">22.4°C</p>
                         </div>
                         <div class="conts">
                             <p> 50%</p>
                         </div>
                     </div>
+
+                    
                 </div>
+
+                <div class="bluralert">
+                    <div class="alert">
+                        <ion-icon name="close-outline"></ion-icon>
+                        <div class="areabutonssensores">
+                            <div class="butsensores"><p>1</p></div>
+                            <div class="butsensores"><p>2</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                
 
 
 
