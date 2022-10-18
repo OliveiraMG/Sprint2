@@ -169,10 +169,13 @@ body {
 
 .Temp, #tempreal{
     color: rgba(255, 128, 0, 0.99);
+    
 }
 .Umid{
     color: rgba(0, 157, 255, 0.99);
 }
+
+
 
 .graficomin1 {
     height: 100%;

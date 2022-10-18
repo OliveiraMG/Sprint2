@@ -3,26 +3,35 @@
 
 
 function mudarkpi() {
+
+    //"animação" mostra e muda as metricas de temperatura e umidade, setinterval- intervalo de tempo, setimeout - executa depois de um certo tempo
+    // 2000 são 2 segundos
+
     setInterval(() => {
         setTimeout(() => {
-            tempreal.innerHTML=`22.6°C`
+            tempreal.innerHTML = `22.6°C`
         }, 2000);
         setTimeout(() => {
-            tempreal.innerHTML=`22.8°C`
+            tempreal.innerHTML = `22.8°C`
         }, 4000);
         setTimeout(() => {
-            tempreal.innerHTML=`23.2°C`
+            tempreal.innerHTML = `23.2°C`     //"animação" que muda o valor de temperatura "em tempo real" 
         }, 6000);
         setTimeout(() => {
-            tempreal.innerHTML=`23.1°C`
+            tempreal.innerHTML = `23.1°C`
         }, 8000);
         setTimeout(() => {
-            tempreal.innerHTML=`22.7°C`
+            tempreal.innerHTML = `22.7°C`
         }, 10000);
         setTimeout(() => {
-            tempreal.innerHTML=`22.6°C`
+            tempreal.innerHTML = `22.6°C`
         }, 5000);
     }, 8000);
+    //---------------------------------------------------------------
+
+
+    //"animação" mostra e muda as metricas de temperatura e umidade, setinterval- intervalo de tempo, setimeout - executa depois de um certo tempo
+
     setInterval(() => {
 
         setTimeout(() => {
@@ -34,7 +43,6 @@ function mudarkpi() {
 
         }, 0);
 
-        
 
         setTimeout(() => {
             p1.innerHTML = `46%`
@@ -47,7 +55,7 @@ function mudarkpi() {
 
     }, 18000);
 
-    
+
 
 }
 
@@ -55,17 +63,17 @@ function mudarkpi() {
 
 var x = document.querySelector(".bluralert")
 
-function fechar(){
-    x.style.display = 'none'
+function fechar() {
+    x.style.display = 'none'        //fechar area que tem os botoes para mudar de sensor (altera o CSS)
 }
 
-function abrir(){
+function abrir() {
 
-    if(x.style.display != 'flex'){
-        x.style.display = 'flex'
-    }else{
+    if (x.style.display != 'flex') {
+        x.style.display = 'flex'              //abrir e fechar area que tem os botoes para mudar de sensor (altera o CSS)
+    } else {
         x.style.display = 'none'
     }
-    
+
 }
 
