@@ -178,7 +178,7 @@ body{
 
 .butsensores{
     margin-left: 10px;
-background-color: #1B0140;
+    background-color: #330375;
 width: 110px;
 height: 30px;
 border-radius: 5px;
@@ -187,6 +187,11 @@ align-items: center;
 justify-content: center;
 color: white;
 cursor: pointer;
+}
+
+.butsensores:hover{
+    background-color: #240155;
+
 }
 
 .one{
