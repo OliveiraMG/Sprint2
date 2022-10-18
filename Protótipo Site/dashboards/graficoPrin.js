@@ -39,4 +39,5 @@ const horarioPrin = [
     document.getElementById('graficoPrin'),
     configPrin
   );
+
 // Termino Gráfico principal
