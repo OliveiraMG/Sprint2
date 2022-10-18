@@ -17,7 +17,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="mudarkpi()">
 
     <div class="box1">
         <div class="cbar">
@@ -66,23 +66,23 @@
             <div class="graphic1">
                 <div class="blur"></div>
 
-                
+
 
                 <div class="ping">
                     <div class="ping1red">
-                        <p> 32º</p>
+                        <p id="p1"> 18.0º</p>
                     </div>
                     <div class="ping1yellow">
-                        <p>30º</p>
+                        <p id="p2">19.5º</p>
                     </div>
                     <div class="ping1green">
-                        <p>20º</p>
+                        <p id="p3">22.5º</p>
                     </div>
                     <div class="ping1yellow">
-                        <p>30º</p>
+                        <p id="p4">25.5º</p>
                     </div>
                     <div class="ping1red">
-                        <p>32º</p>
+                        <p id="p5">27.0º</p>
                     </div>
                 </div>
 
@@ -95,14 +95,23 @@
                 <div class="mingraphic1">
 
                     <div class="blockup">
-                        <div class="blur2"></div>
-    
-                        <div class="graficomin1"></div>
+                        <div class="parametry T">
+                            <p>Temperatura</p>
+                            <p class="parametrybold Temp"><ion-icon name="thermometer-outline"></ion-icon> 17.1º <br><ion-icon name="thermometer-outline"></ion-icon> 22.7º</p>
+                        </div>
+                        <div class="parametry D">
+                            <p>Umidade</p>
+                            <p class="parametrybold Umid"><ion-icon name="water-outline"></ion-icon> 46.8%  <br><ion-icon name="water-outline"></ion-icon> 49.8%</p>
+                        </div>
                     </div>
-    
+
                     <div class="blockdown">
-                        <div class="conts"></div>
-                        <div class="conts"></div>
+                        <div class="conts">
+                            <p>22.5º</p>
+                        </div>
+                        <div class="conts">
+                            <p> 50%</p>
+                        </div>
                     </div>
                 </div>
 
@@ -120,6 +129,8 @@
 </body>
 
 </html>
+
+<script src="kpi.js"></script>
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

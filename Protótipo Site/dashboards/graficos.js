@@ -15,13 +15,13 @@ const horarioPrin = [
     labels: horarioPrin,
     datasets: [{
       label: 'Temperatura',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: ' rgba(255, 128, 0, 0.99)',
+      borderColor: ' rgba(255, 128, 0, 0.99)',
       data: [18.6, 17.10, 20.6, 19.2, 22.7, 22.1, 19.3, 17.9, 19.8],
     }, {   
       label: 'Umidade',
-      backgroundColor: 'rgb(000, 99, 132)',
-      borderColor: 'rgb(000, 99, 132)',
+      backgroundColor: 'rgba(0, 157, 255, 0.99)',
+      borderColor: 'rgba(0, 157, 255, 0.99)',
       data: [47.2, 48.5, 48.3, 47.2, 46.8, 48.2, 49.1, 49.4, 49.80],
     }]
   };
@@ -55,8 +55,8 @@ const dataTemp = {
   labels: horarioTemp,
   datasets: [{
     label: 'Temperatura (°C)',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(255, 128, 0, 0.99)',
+    borderColor: 'rgba(255, 128, 0, 0.99)',
     data: [24.5, 25.2, 18.10, 20.10, 26.5, 20.7, 21.4, 27.3],
   }]
 };
@@ -92,8 +92,8 @@ const dataTemp2 = {
   labels: horarioTemp2,
   datasets: [{
     label: 'Temperatura (°C)',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(255, 128, 0, 0.99)',
+    borderColor: 'rgba(255, 128, 0, 0.99)',
     data: [25.2, 24.1, 19.2, 21.2, 23.7, 18.1, 25.3, 19.9],
   }]
 };

@@ -20,13 +20,13 @@ body {
 
 }
 
-.one{
+.one {
     width: 100%;
 
 }
 
 
-.graphic1{
+.graphic1 {
     height: 90%;
     width: 100%;
     background-color: #8a8a8a2e;
@@ -42,19 +42,19 @@ body {
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-   
+
 }
 
 
 
 
-.blur{
+.blur {
     backdrop-filter: blur(100px);
     position: absolute;
-    z-index:0;
+    z-index: 0;
     height: 100%;
     width: 100%;
-    
+
 }
 
 .grafico {
@@ -67,7 +67,7 @@ body {
     position: absolute;
     align-self: flex-end;
 
- 
+
 }
 
 .tm {
@@ -81,18 +81,21 @@ body {
 
 
 
-.ping { 
+.ping {
     height: 20%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    color: white;
+    color: #1B0140;
+    transition: all ease-in-out;
 
 }
 
-.ping1green,.ping2green,.ping1red,.ping2red,.ping1yellow,.ping2yellow{
+.ping1green,
+.ping1red,
+.ping1yellow {
     height: 50%;
     width: 16%;
     background-color: rgba(37, 37, 37, 0.318);
@@ -102,34 +105,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.ping1red{
-    border-left:solid 5px red;
-    
-}
-.ping1yellow{
-    border-left:solid 5px rgb(234, 255, 0);
-    
-}
-.ping1green{
-    border-left:solid 5px green;
-    
+.ping1red {
+    border-right: solid 5px  rgb(255, 0, 0);
+
+    border-left: solid 5px  rgb(255, 0, 0);
+    background-color: rgba(248, 248, 248, 0.963);
+
 }
 
-.ping2red{
-    border-right:solid 5px red;
-    
-}
-.ping2yellow{
-    border-right:solid 5px rgb(234, 255, 0);
-    
-}
-.ping2green{
-    border-right:solid 5px green;
-    
+.ping1yellow {
+    border-right: solid 5px rgb(234, 255, 0);
+    border-left: solid 5px rgb(234, 255, 0);
+    background-color: rgba(248, 248, 248, 0.963) ;
+
+
 }
 
+.ping1green {
+    border-right: solid 5px rgba(0, 255, 0, 0.959);
+    border-left: solid 5px rgba(0, 255, 0, 0.959);
+    background-color: rgba(248, 248, 248, 0.963);
+    animation: flush 1s 0s alternate ease-in-out infinite ;
+
+
+}
 
 .mingraphic1,
 .mingraphic2 {
@@ -145,7 +148,7 @@ body {
     backdrop-filter: blur(10px);
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     width: 100%;
     height: 75%;
     border-radius: 20px;
@@ -153,23 +156,38 @@ body {
     overflow: hidden;
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 
 
 }
 
+.parametry{
+height: 30%;
+width: 100%;
+text-align: center;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-top: 12%;
 
-.blur2{
-    backdrop-filter: blur(100px);
-    position: absolute;
-    z-index:0;
-    height: 100%;
-    width: 100%;
-    
 }
 
-.graficomin1{
+
+.parametrybold{
+    font-size: 20px;
+    font-weight: bold;
+}  
+
+.Temp{
+    color: rgba(255, 128, 0, 0.99);
+}
+.Umid{
+    color: rgba(0, 157, 255, 0.99);
+}
+
+.graficomin1 {
     height: 100%;
     width: 100%;
     display: flex;
@@ -195,20 +213,36 @@ body {
 }
 
 .conts {
-    background-color: rgba(37, 37, 37, 0.318);
+    background-color: rgba(248, 248, 248, 0.963);
     backdrop-filter: blur(10px);
     width: 48%;
     height: 90px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conts p {
+    color: #1B0140;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.mingraphic1 {
+    height: 75%;
+    width: 25%;
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
 
 }
 
-.mingraphic1{
-    height: 75%;
-    width: 25%;
-position: absolute;
-right: 1%;
-bottom: 5%;
 
+@keyframes flush {
+    from{
+        background-color: rgba(9, 199, 9, 0.967);
+
+    }
 }
