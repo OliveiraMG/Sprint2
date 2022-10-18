@@ -140,6 +140,8 @@ body{
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+
 }
 
 .alert ion-icon{
@@ -184,6 +186,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: white;
+cursor: pointer;
 }
 
 .one{

@@ -1,3 +1,7 @@
+
+// ANIMAÇÃO VALORES DAS KPIs --------- TOPO DA TELA PRINCIPAL---------------------------- 
+
+
 function mudarkpi() {
     setInterval(() => {
         setTimeout(() => {
@@ -25,7 +29,6 @@ function mudarkpi() {
             p1.innerHTML = `18.0°C`
             p2.innerHTML = `19.5°C`
             p3.innerHTML = `22.5°C`
-            
             p4.innerHTML = `25.5°C`
             p5.innerHTML = `27.0°C`
 
@@ -48,18 +51,21 @@ function mudarkpi() {
 
 }
 
-// ANIMAÇÃO VALORES 
+// ABRIR E FECHAR AREA DE MUDAR DE SENSORES-------------------------------
 
+var x = document.querySelector(".bluralert")
 
 function fechar(){
-    var x = document.querySelector(".bluralert");
     x.style.display = 'none'
-    
 }
 
 function abrir(){
-    var x = document.querySelector(".bluralert");
-    x.style.display = 'flex'
+
+    if(x.style.display != 'flex'){
+        x.style.display = 'flex'
+    }else{
+        x.style.display = 'none'
+    }
     
 }
 
