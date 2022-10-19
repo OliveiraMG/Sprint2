@@ -75,3 +75,26 @@ const horarioUmid2 = [
   );
 
   // Término Gráfico Umidade 1
+
+
+
+
+
+
+
+  var x = document.querySelector(".bluralert")
+var tm = document.querySelector(".tm")
+
+
+function irsensorumid1() {
+  tm.style.flexDirection = "column"
+  x.style.display = 'none'
+
+}
+
+function irsensorumid5() {
+  tm.style.flexDirection = "column-reverse"
+  x.style.display = 'none'
+  
+
+}
