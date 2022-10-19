@@ -172,7 +172,7 @@ input, button {
 }
 
 input:focus{
-    outline: 3px solid #380E72;
+    outline: 1px solid #380E72;
 }
 
 
