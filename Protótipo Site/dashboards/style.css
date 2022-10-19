@@ -228,6 +228,9 @@ cursor: pointer;
 
 }
 
+#graf2{
+    display: none;
+}
 
 .two{
     height: 100%;

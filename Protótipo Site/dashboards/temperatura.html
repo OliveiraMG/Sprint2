@@ -62,8 +62,12 @@
                 <div class="blur"></div>
 
                 <div class="grafico">
-                    <div class="tm">
+                    <div class="tm" id="graf1">
                         <canvas id="graficoTemp"></canvas> 
+                    </div>
+
+                    <div class="tm" id="graf2">
+                        <canvas id="graficoTemp2"></canvas> 
                     </div>
                 </div>
 
@@ -72,20 +76,13 @@
                     <div class="blockup">
                         <div class="parametry T">
                             <p>Temperatura</p>
-                            <p class="parametrybold Temp">
-                                Mínima: <ion-icon name="thermometer-outline"></ion-icon> 17.1°C <br>
-                                Máxima: <ion-icon name="thermometer-outline"></ion-icon> 22.7°C
+                            <p class="parametrybold Temp" id="maxmin">
+                                Mínima: <ion-icon name="thermometer-outline"></ion-icon> 18.1°C <br>
+                                Máxima: <ion-icon name="thermometer-outline"></ion-icon> 27.3°C
                             </p>
                         </div>
 
 
-                        <div class="parametry D">
-                            <p>Umidade</p>
-                            <p class="parametrybold Umid">
-                                Mínima: <ion-icon name="water-outline"></ion-icon> 46.8% <br>
-                                Máxima: <ion-icon name="water-outline"></ion-icon> 49.8%
-                            </p>
-                        </div>
                     </div>
 
                     <div class="blockdown">

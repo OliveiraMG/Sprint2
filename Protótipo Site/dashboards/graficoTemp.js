@@ -59,7 +59,7 @@ const horarioTemp2 = [
 const dataTemp2 = {
   labels: horarioTemp2,
   datasets: [{
-    label: 'Temperatura (°C)',
+    label: 'Temperatura (°C)  Sensor 5',
     backgroundColor: 'rgba(255, 128, 0, 0.99)',
     borderColor: 'rgba(255, 128, 0, 0.99)',
     data: [25.2, 24.1, 19.2, 21.2, 23.7, 18.1, 25.3, 19.9],
@@ -89,18 +89,35 @@ const myChart3 = new Chart(
 
 
 var x = document.querySelector(".bluralert")
-var tm = document.querySelector(".tm")
+var grafico = document.querySelector(".grafico")
+var g1 = document.querySelector("#graf1")
+var g2 = document.querySelector("#graf2")
+var mudartext = document.querySelector("#maxmin")
+
+
 
 
 function irsensortemp1() {
-  tm.style.flexDirection = "column"
+  g1.style.display = 'flex'
+  g2.style.display = 'none'
   x.style.display = 'none'
+
+  mudartext.innerHTML=`Mínima: <ion-icon name="thermometer-outline"></ion-icon> 18.1°C <br>
+  Máxima: <ion-icon name="thermometer-outline"></ion-icon> 27.3°C`
+
+
+
 
 }
 
-function irsensor5temp() {
-  tm.style.flexDirection = "column-reverse"
+function irsensortemp5() {
+  g2.style.display = 'flex'
+  g1.style.display = 'none'
   x.style.display = 'none'
-  
+
+  mudartext.innerHTML=`Mínima: <ion-icon name="thermometer-outline"></ion-icon> 18.1°C <br>
+  Máxima: <ion-icon name="thermometer-outline"></ion-icon> 25.3°C`
+
+
 
 }
