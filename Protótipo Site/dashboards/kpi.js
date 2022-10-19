@@ -11,40 +11,50 @@ function mudarkpi() {
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 2`
                 tempreal.innerHTML = `17.1°C`
+                contsTemp.style.backgroundColor = "yellow"
             }, 2000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 3`
-                tempreal.innerHTML = `20.6ºC`     //"animação" que muda o valor de temperatura "em tempo real" 
+                tempreal.innerHTML = `20.6ºC`
+                contsTemp.style.backgroundColor = "rgba(9, 199, 9, 0.967)"     //"animação" que muda o valor de temperatura "em tempo real" 
             }, 4000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 4`
                 tempreal.innerHTML = `19.2°C`
+                contsTemp.style.backgroundColor = "yellow"
             }, 6000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 5`
                 tempreal.innerHTML = `22.7°C`
+                contsTemp.style.backgroundColor = "rgba(9, 199, 9, 0.967)"
             }, 8000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 6`
                 tempreal.innerHTML = `22.1°C`
+                contsTemp.style.backgroundColor = "rgba(9, 199, 9, 0.967);"
             }, 10000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 7`
                 tempreal.innerHTML = `19.3°C`
+                contsTemp.style.backgroundColor = "yellow"
             }, 12000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 8`
                 tempreal.innerHTML = `17.9°C`
+                contsTemp.style.backgroundColor = "red"
             }, 14000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 9`
                 tempreal.innerHTML = `19.8°C`
+                contsTemp.style.backgroundColor = "yellow"
             }, 16000);
             setTimeout(() => {
                 tTempreal.innerHTML = `Sensor 1`
                 tempreal.innerHTML = `18.6°C`
+                contsTemp.style.backgroundColor = "yellow"
             }, 18000);
     }, 20000);
+
 
        setInterval(() => {
             setTimeout(() => {

@@ -82,10 +82,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
+    position: absolute;
     color: #1B0140;
     transition: all ease-in-out;
+}
 
+.tituloPing {
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .ping1green,
@@ -100,7 +104,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.5rem;
+    flex-direction: column;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -109,7 +114,15 @@ body {
 
     border-left: solid 5px  rgb(255, 0, 0);
     background-color: rgba(248, 248, 248, 0.963);
+}
 
+.ping1red #tituloP1 {
+    font-size: 1.5rem;
+    padding-top: 0%;
+}
+
+.ping1red #p1 {
+    margin-top: 0%;
 }
 
 .ping1yellow {
@@ -124,6 +137,8 @@ body {
     background-color: rgba(248, 248, 248, 0.963);
     animation: flush 1s 0s alternate ease-in-out infinite ;
 }
+
+
 
 .mingraphic1,
 .mingraphic2 {
@@ -202,7 +217,7 @@ body {
 }
 
 .contsTemp {
-    background-color: rgba(248, 248, 248, 0.963);
+    background-color: yellow;
     backdrop-filter: blur(10px);
     width: 48%;
     height: 90px;
