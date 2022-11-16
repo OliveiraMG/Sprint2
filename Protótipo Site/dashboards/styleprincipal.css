@@ -214,6 +214,7 @@ body {
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .contsTemp {
@@ -276,7 +277,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    align-self: center;
 }
 
 .contsUmid #tUmidreal {
@@ -299,6 +299,9 @@ body {
     bottom: 5%;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
 }
 
