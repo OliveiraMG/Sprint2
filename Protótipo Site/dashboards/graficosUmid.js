@@ -82,19 +82,32 @@ const horarioUmid2 = [
 
 
 
-  var x = document.querySelector(".bluralert")
+var x = document.querySelector(".bluralert")
 var tm = document.querySelector(".tm")
+
+var g1 = document.querySelector("#graficosensor1")
+var g2 = document.querySelector("#graficosensor2")
+var mudartext = document.querySelector("#maxmin")
 
 
 function irsensorumid1() {
-  tm.style.flexDirection = "column"
+  g1.style.display = 'flex'
+  g2.style.display = 'none'
   x.style.display = 'none'
+
+  mudartext.innerHTML=`Mínima: <ion-icon name="thermometer-outline"></ion-icon> 18.1°C <br>
+  Máxima: <ion-icon name="thermometer-outline"></ion-icon> 25.3°C`
 
 }
 
 function irsensorumid5() {
-  tm.style.flexDirection = "column-reverse"
+  g1.style.display = 'none'
+  g2.style.display = 'flex'
   x.style.display = 'none'
+
+  mudartext.innerHTML=`Mínima: <ion-icon name="thermometer-outline"></ion-icon> 18.1°C <br>
+  Máxima: <ion-icon name="thermometer-outline"></ion-icon> 25.3°C`
   
 
 }
+

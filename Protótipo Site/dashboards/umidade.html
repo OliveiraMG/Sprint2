@@ -59,66 +59,64 @@
 
   <div class="box3">
     <div class="one">
-        <div class="graphic1">
-            <div class="blur"></div>
+      <div class="graphic1">
+        <div class="blur"></div>
 
-            <div class="grafico">
-                <div class="tm">
-                    <h2>Registros do ultimo intervalo (15min)</h2>
-                    <canvas id="graficoUmid"></canvas> 
-                    <!-- <canvas id="graficoUmid2"></canvas> grafico  -->
-                </div>
+        <div class="grafico">
+          <div class="tm" id="graficosensor1">
+            <h2>Gráficos de Temperatura - Sensor 1</h2>
+            <canvas id="graficoUmid"></canvas>
+            <!-- <canvas id="graficoUmid2"></canvas> grafico  -->
+          </div>
+
+
+          <div class="tm" id="graficosensor2">
+            <h2>Gráficos de Temperatura - Sensor 2</h2>
+            <canvas id="graficoUmid2"></canvas>
+            <!-- <canvas id="graficoUmid2"></canvas> grafico  -->
+          </div>
+        </div>
+
+        <div class="mingraphic1">
+
+          <div class="blockup">
+            <div class="parametry T">
+              <p>Umidade</p>
+              <p class="parametrybold Umid">
+                Mínima: <ion-icon name="water-outline"></ion-icon> 46.8% <br>
+                Máxima: <ion-icon name="water-outline"></ion-icon> 49.8%
+              </p>
             </div>
+          </div>
 
-            <div class="mingraphic1">
-
-                <div class="blockup">
-                    <div class="parametry T">
-                        <p>Temperatura</p>
-                        <p class="parametrybold Temp">
-                            Mínima: <ion-icon name="thermometer-outline"></ion-icon> 17.1°C <br>
-                            Máxima: <ion-icon name="thermometer-outline"></ion-icon> 22.7°C
-                        </p>
-                    </div>
-
-
-                    <div class="parametry D">
-                        <p>Umidade</p>
-                        <p class="parametrybold Umid">
-                            Mínima: <ion-icon name="water-outline"></ion-icon> 46.8% <br>
-                            Máxima: <ion-icon name="water-outline"></ion-icon> 49.8%
-                        </p>
-                    </div>
-                </div>
-
-                <!-- <div class="blockdown">
+          <!-- <div class="blockdown">
                     <div class="contsTemp">
                         <p id="tTempreal">Sensor 1</p>
                         <p id="tempreal">18.6°C</p>
                     </div> -->
-                    <div class="contsUmid">
-                        <p id="tUmidreal">Sensor 1</p>
-                        <p id="umidReal">47.2%</p>
-                    </div>
-                </div>
-
-
-            </div>
-
+          <div class="contsUmid">
+            <p id="tUmidreal">Sensor 1</p>
+            <p id="umidReal">47.2%</p>
+          </div>
         </div>
-    </div>
 
-    <div class="bluralert">
-        <div class="alert">
-            <ion-icon name="close-outline" onclick="fechar()"></ion-icon>
-            <div class="areabutonssensores">
-                <button class="butsensores" onclick="irsensorumid1()">Sensor 1</button>
-                <button class="butsensores" onclick="irsensorumid5()">Sensor 5</button>
-            </div>
 
-        </div>
+      </div>
+
     </div>
-</div>
+  </div>
+
+  <div class="bluralert">
+    <div class="alert">
+      <ion-icon name="close-outline" onclick="fechar()"></ion-icon>
+      <div class="areabutonssensores">
+        <button class="butsensores" onclick="irsensorumid1()">Sensor 1</button>
+        <button class="butsensores" onclick="irsensorumid5()">Sensor 2</button>
+      </div>
+
+    </div>
+  </div>
+  </div>
 
 </body>
 
