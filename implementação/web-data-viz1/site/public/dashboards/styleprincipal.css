@@ -1,0 +1,309 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(248, 248, 248, 0.809);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box3 {
+    height: 98%;
+    width: 85%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.one {
+    width: 100%;
+}
+
+.graphic1 {
+    height: 90%;
+    width: 100%;
+    background-color: #8a8a8a2e;
+    backdrop-filter: blur(10px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(44, 44, 44, 0.455);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.blur {
+    backdrop-filter: blur(100px);
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.grafico {
+    margin-top: 5rem;
+    margin-right: 10rem;
+    margin-bottom: 10rem;
+    height: 80%;
+    width: 85%;
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+}
+
+.tm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 95%;
+    width: 85%;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.tm h2 {
+    margin-top: 50px;
+}
+
+.ping {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    color: #1B0140;
+    transition: all ease-in-out;
+}
+
+.tituloPing {
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ping1green,
+.ping1red,
+.ping1yellow {
+    height: 50%;
+    width: 16%;
+    background-color: rgba(37, 37, 37, 0.318);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px 1px rgba(68, 68, 68, 0.485);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.ping1red {
+    border-right: solid 5px  rgb(255, 0, 0);
+
+    border-left: solid 5px  rgb(255, 0, 0);
+    background-color: rgba(248, 248, 248, 0.963);
+}
+
+.ping1red #tituloP1 {
+    font-size: 1.5rem;
+    padding-top: 0%;
+}
+
+.ping1red #p1 {
+    margin-top: 0%;
+}
+
+.ping1yellow {
+    border-right: solid 5px rgb(234, 255, 0);
+    border-left: solid 5px rgb(234, 255, 0);
+    background-color: rgba(248, 248, 248, 0.963) ;
+}
+
+.ping1green {
+    border-right: solid 5px rgba(0, 255, 0, 0.959);
+    border-left: solid 5px rgba(0, 255, 0, 0.959);
+    background-color: rgba(248, 248, 248, 0.963);
+    animation: flush 1s 0s alternate ease-in-out infinite ;
+}
+
+
+
+.mingraphic1,
+.mingraphic2 {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+
+.blockup {
+    background-color: #1B0140;
+    backdrop-filter: blur(10px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parametry{
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 12%;
+}
+
+
+.parametrybold{
+    font-size: 20px;
+    font-weight: bold;
+}  
+
+.Temp, #tempreal{
+    color: rgba(255, 128, 0, 0.99);
+    
+}
+.Umid{
+    color: rgba(0, 157, 255, 0.99);
+}
+
+
+
+.graficomin1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10%;
+    margin: bottom 7px;
+}
+
+
+
+
+
+.blockdown {
+    background-color: transparent;
+    width: 100%;
+    height: 25%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contsTemp {
+    background-color: yellow;
+    backdrop-filter: blur(10px);
+    width: 48%;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contsTemp #tTempreal {
+    color: black;
+    font-size: 20px;
+
+}
+
+.contsTemp #tempreal {
+    color: rgba(255, 128, 0, 0.99);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contsTemp1 {
+    background-color: rgba(248, 248, 248, 0.963);
+    backdrop-filter: blur(10px);
+    width: 48%;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contsTemp1 #tTempreal1 {
+    color: black;
+    font-size: 20px;
+}
+
+.contsTemp1 #tempreal1 {
+    color: rgba(255, 128, 0, 0.99);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contsUmid {
+    background-color: rgba(248, 248, 248, 0.963);
+    backdrop-filter: blur(10px);
+    width: 48%;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contsUmid #tUmidreal {
+    color: black;
+    font-size: 20px;
+}
+
+.contsUmid #umidReal {
+    color: rgba(0, 157, 255, 0.99);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.mingraphic1 {
+    height: 75%;
+    width: 25%;
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+}
+
+
+@keyframes flush {
+    from{
+        background-color: rgba(9, 199, 9, 0.967);
+
+    }
+}
+

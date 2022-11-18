@@ -1,0 +1,271 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1{
+    height: 90%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cbar{
+    height: 95%;
+    width: 100%;
+    background-color: #1B0140;
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20% 0;
+}
+
+.list{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list a {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.list a:hover {
+    border-left: solid 3px white;
+}
+
+.cbar ion-icon {
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+
+.box2{
+    height: 90%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+    position: relative;
+}
+
+.search{
+    height: 40px;
+    width: 40px;
+    background-color: #1B0140;
+    border-radius: 50%;
+    position: absolute;
+    top: 28%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+
+.mincbar{
+    height: 28%;
+    width: 70%;
+    background-color: #1B0140;
+    border-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.options{
+    background-color: #472675;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+
+.options a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.options ion-icon{
+    color: white;
+    font-size: 20px;
+}
+
+.box3{
+    height: 90%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.alert{
+    height: 60%;
+    width: 50%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+
+}
+
+.alert ion-icon{
+    position: relative;
+    left: 96%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.bluralert{
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 0;
+    height: 90%;
+    width: 84%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(37, 37, 37, 0.227);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+
+}
+
+.areabutonssensores{
+    margin-top:5px ;
+    height: 90%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.butsensores{
+    margin-left: 10px;
+    background-color: #330375;
+width: 110px;
+height: 30px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+cursor: pointer;
+}
+
+.butsensores:hover{
+    background-color: #240155;
+
+}
+
+.one{
+    height: 100%;
+    width: 70%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.graphic1{
+    height: 48%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.graphic2{
+    height: 46%;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#graf2{
+    display: none;
+}
+
+.two{
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mingraphic1{
+    height: 45%;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+}
+
+.mingraphic2{
+    height: 45%;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+
+}
+
+.tm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 65%;
+}
+
+
+

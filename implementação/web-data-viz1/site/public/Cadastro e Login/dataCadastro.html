@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icon" type="image/x-icon">
+
+    <title>Thermodata</title>
+</head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="dataCadastro.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<title> ThermoData Cadastro</title>
+
+<body>
+
+    <div class="header">
+        <div class="logonavbar">
+            <img src="assets/thermi.png" alt="">
+            <ul>
+                <li> <a href="../index.html">HOME</a></li>
+                <li> <a href="../Simulador Financeiro/simulador.html">SIMULE</a></li>
+            </ul>
+        </div>
+        <div class="buttonslogcad">
+            <a class="fakebutton" href="dataLogin.html">LOGIN</a>
+            <a class="fakebutton" href="#">CADASTRE-SE</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div id="form" class="form">
+
+            <h2>Cadastro da Empresa</h2>
+            <div class="campos">
+                <div class="campo">
+                    <label for="nome_empresa">Nome</label>
+                    <input type="text" name="" id="nome_empresa" placeholder="Nome da Empresa">
+                </div>
+                <div class="campo">
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text " id="cnpj_empresa" placeholder="XX.XXX.XXX/0001-XX">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="logradoruo">Logradouro:</label>
+                    <input id="logradouro_empresa" placeholder="Logradouro/Rua">
+                </div>
+
+                <div class="campo">
+                    <label for="bairro">Bairro:</label>
+                    <input id="bairro_empresa" placeholder="Bairro">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="cep">CEP:</label>
+                    <input id="cep_empresa" placeholder="XXXXX-XX">
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade:</label>
+                    <input id="cidade_empresa" placeholder="Exemplo: São Paulo">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="estado">Estado:</label>
+                    <input id="estado_empresa" placeholder="Exemplo: São Paulo ">
+                </div>
+
+                <div class="campo">
+                    <label for="telefone"> Telefone: </label>
+                    <input id="telefone_empresa" placeholder="(ddd)-99999-8888">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="email"> Email: </label>
+                    <input id="email_empresa" placeholder="thermodata@email.com">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha_empresa" placeholder="************">
+                </div>
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="senhaCF"> Confirmação de Senha: </label>
+                    <input type="password" id="senhaCF_empresa" placeholder="************">
+                </div>
+                <div class="campo">
+                    <button onclick="cadastrar()">Registre-se</button>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="form tr">
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4> Recursos </h4>
+                    <ul>
+                        <li><a href="#"> Aplicação </a> </li>
+                        <li><a href="#"> Documentação </a> </li>
+                        <li><a href="#"> Sistemas </a> </li>
+                        <li><a href="#"> FAQ </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Companhia </h4>
+                    <ul>
+                        <li><a href="#"> Sobre Nós </a> </li>
+                        <li><a href="#"> Blog </a> </li>
+                        <li><a href="#"> Parcerias </a> </li>
+                        <li><a href="#"> Carreiras </a> </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4> Privacidade </h4>
+                    <ul>
+                        <li><a href="#"> Política de Privacidade </a> </li>
+                        <li><a href="#"> Política de Cookies </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Redes Sociais </h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#"> <i class="fab fa-whatsapp"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        //aguardar();
+
+        var nomeVar = nome_empresa.value 
+        var cnpj = cnpj_empresa.value 
+        var logradouro = logradouro_empresa.value 
+        var bairro = bairro_empresa.value 
+        var cep = cep_empresa.value
+        var cidade = cidade_empresa.value 
+        var estado = estado_empresa.value 
+        var tel = telefone_empresa.value 
+        var emailVar = email_empresa.value 
+        var senhaVar = senha_empresa.value 
+        var confirmacaoSenhaVar = senhaCF_empresa.value 
+       
+
+        if (nomeVar == '' || cnpj == '' || logradouro == '' || bairro == '' || cep == '' || cidade == '' || estado == '' || tel == '' || emailVar == '' || senhaVar == '' || confirmacaoSenhaVar == '') {
+            //cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                cnpjServer: cnpj,
+                logradouroServer: logradouro,
+                bairroServer: bairro,
+                cepServer: cep,
+                cidadeServer:cidade,
+                estadoServer: estado,
+                telServer: tel,                
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                //cardErro.style.display = "block";
+
+               // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "dataLogin.html";
+                }, "2000")
+                
+               // limparFormulario();
+                //finalizarAguardar();
+            } else {
+                    
+                throw (`Houve um erro ao tentar realizar o cadastro!`);
+            }
+        }).catch(function (resposta) {
+            
+            console.log(`#ERRO: ${resposta}`);
+            //finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        //cardErro.style.display = "none"
+    }
+</script>

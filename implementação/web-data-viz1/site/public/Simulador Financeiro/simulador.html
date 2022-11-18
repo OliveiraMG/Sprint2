@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="simulador.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/icon" type="image/x-icon">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="block">
+        <div class="header">
+            <div class="logonavbar">
+                <img src="../assets/thermo" alt="">
+                <ul>
+                    <li> <a href="../index.html">HOME</a></li>
+                    <li> <a href="#">SIMULE</a></li>
+                </ul>
+            </div>
+            <div class="buttonslogcad">
+                <a class="fakebutton" href="../Cadastro e Login/dataLogin.html">LOGIN</a>
+                <a class="fakebutton" href="../Cadastro e Login/dataCadastro.html">CADASTRE-SE</a>
+            </div>
+        </div>
+    </div>
+    <!-- Início do Simulador -->
+    <div class="simulador">
+
+        <!-- Caixa da esquerda -->
+        <div class="box_e">
+            <div class="simule">
+                <h2>SIMULE</h2>
+                <label for="racks">Quantos racks sua empresa tem ?</label>
+                <input type="number" id="in_qtdRacks"> <br>
+                <label for="tier">Selecione o tier do seu Data Center:</label>
+                <select name="" id="sel_tiers">
+                    <option value=""> -- </option>
+                    <option value="1">Tier 1</option>
+                    <option value="2">Tier 2</option>
+                    <option value="3">Tier 3</option>
+                    <option value="4">Tier 4</option>
+                </select> <br>
+                <button onclick="economizar()">Simular</button>
+            </div>
+        </div>
+        
+        <!-- Caixa Direita -->
+        <div class="box_d">
+            <div class="resultado">
+                <p id="p_resultado">
+                    <p></p>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Fim do Simulador -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4> Recursos </h4>
+                    <ul>
+                        <li><a href="#"> Aplicação </a> </li>
+                        <li><a href="#"> Documentação </a> </li>
+                        <li><a href="#"> Sistemas </a> </li>
+                        <li><a href="#"> FAQ </a> </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4> Companhia </h4>
+                    <ul>
+                        <li><a href="#"> Sobre Nós </a> </li>
+                        <li><a href="#"> Blog </a> </li>
+                        <li><a href="#"> Parcerias </a> </li>
+                        <li><a href="#"> Carreiras </a> </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4> Privacidade </h4>
+                    <ul>
+                        <li><a href="#"> Política de Privacidade </a> </li>
+                        <li><a href="#"> Política de Cookies </a> </li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col">
+                    <h4> Redes Sociais </h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#"> <i class="fab fa-instagram"></i> </a>
+                        <a href="#"> <i class="fab fa-whatsapp"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
+
+        </div>
+    </footer>
+    <!-- fim do footer -->
+</body>
+</html>
+<script>
+    function economizar() {
+        p_resultado.innerHTML = ""
+        var qtdRacks = Number(in_qtdRacks.value);
+        var tier = sel_tiers.value;
+        
+        if (qtdRacks != 0) {
+            if (tier == 1 || tier == 2 || tier == 3 || tier == 4) {
+                var qtdArduino = Math.ceil(qtdRacks / 6);
+                var conta1 = 8750 * tier;
+                var conta2 = (8750 * 5.21) * tier;
+
+                p_resultado.innerHTML = `Utilizaremos ${qtdArduino} Arduino(s) (capacidade de até ${qtdArduino * 6} sensores DHT-11) para monitorar a temperatura e umidade dos seus racks. <br>
+                Um downtime pode causar em média um custo de <span class= "destaque">U$9000</span> até mais de <span class="destaque">U$100000</span>, com equipamento, manutenção, recuperação de dados, dito isso com nosso monitoramento, você pode economizar mais de <span class="destaque">U$${conta1.toFixed(2)}/ R$${conta2.toFixed(2)}</span> por downtime evitando a perda de dados e hardware.`
+
+            } else {
+                alert("Insira um tier para podermos fazer a simulação")
+            }
+        } else {
+            alert("Insira uma quantidade de Racks para podermos fazer a simulação")
+        }
+    }
+</script>
