@@ -2,7 +2,8 @@
 node_modules
 package-lock.json
 
-site/node_modules
-site/package-lock.json
+der_thermodata.bak
+der_thermodata.mwb
+
 
 .github
