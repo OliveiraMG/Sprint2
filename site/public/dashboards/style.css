@@ -14,7 +14,8 @@ body{
     justify-content: center;
 }
 
-.box1{
+/* DASHBOARD HEADER */
+.dashHeader{
     height: 90%;
     width: 5%;
     display: flex;
@@ -22,7 +23,7 @@ body{
     justify-content: center;
 }
 
-.cbar{
+.dashNav{
     height: 95%;
     width: 100%;
     background-color: #1B0140;
@@ -34,24 +35,7 @@ body{
     padding: 20% 0;
 }
 
-.list{
-    height: 40%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.list a {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.list a:hover {
-    border-left: solid 3px white;
-}
-
-.cbar ion-icon {
+.dashNav ion-icon {
     color: white;
     font-size: 20px;
     height: 30px;
@@ -59,9 +43,24 @@ body{
     cursor: pointer;
 }
 
+.dashNavOpts{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dashNavOpts a {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
 
+.dashNavOptsa:hover {
+    border-left: solid 3px white;
+}
 
-.box2{
+.dashSensor{
     height: 90%;
     width: 5%;
     display: flex;
@@ -71,7 +70,7 @@ body{
     position: relative;
 }
 
-.search{
+.dashSensors{
     height: 40px;
     width: 40px;
     background-color: #1B0140;
@@ -82,11 +81,16 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    
+}
+
+.dashSensorsOpts ion-icon{
+    color: white;
+    font-size: 20px;
+    margin-top: 3px;
 }
 
 
-.mincbar{
+.dashSensorNav{
     height: 28%;
     width: 70%;
     background-color: #1B0140;
@@ -98,7 +102,7 @@ body{
     padding: 10px 0;
 }
 
-.options{
+.dashSensorNavOpts{
     background-color: #472675;
     height: 30px;
     width: 30px;
@@ -111,7 +115,7 @@ body{
 
 }
 
-.options a{
+.dashSensorNavOpts a{
     height: 100%;
     width: 100%;
     display: flex;
@@ -120,7 +124,7 @@ body{
 
 }
 
-.options ion-icon{
+.dashSensorNavOpts ion-icon{
     color: white;
     font-size: 20px;
 }
