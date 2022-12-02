@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logonavbar {
-    width: 40%;
+    width: 85%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -49,8 +49,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logonavbar ul {
-    width: 80%;
-    height: 50%;
+    width: 90%;
+    height: 65%;
     display: flex;
     align-items: center;
     list-style: none;
@@ -64,6 +64,12 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+.logonavbar .manualdeinstalacao {
+    width: 200px;
+}
+
+
+
 .logonavbar ul a {
     color: white;
     text-decoration: none;
@@ -73,6 +79,10 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.manualdeinstalacao a{
+    width: 100%;
 }
 
 ul a:hover {
