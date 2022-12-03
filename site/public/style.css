@@ -192,12 +192,12 @@ ul a:hover {
 
 .BtnDash {
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #1A023E;
 }
 
 .header .BtnDash:hover {
