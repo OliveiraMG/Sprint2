@@ -190,6 +190,20 @@ ul a:hover {
     
 }
 
+.BtnDash {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 50px;
+    height: 50px;
+}
+
+.header .BtnDash:hover {
+    border-bottom: solid 1px white;
+}
+
 .bground img {
     height: 600px;
     width: 600px;
