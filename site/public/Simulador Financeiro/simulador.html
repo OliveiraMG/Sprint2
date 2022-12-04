@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="simulador.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="../assets/icon" type="image/x-icon">   
+    <link rel="shortcut icon" href="../assets/icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Simulador Financeiro</title>
 </head>
-<body>
+
+<body onload="logado()">
     <!-- Header -->
     <div class="block">
         <div class="header">
@@ -21,10 +23,17 @@
                     <li> <a href="#">SIMULE</a></li>
                 </ul>
             </div>
-            <div class="buttonslogcad">
+            <div class="buttonslogcad" id="buttonslogcad">
                 <a class="fakebutton" href="../Cadastro e Login/dataLogin.html">LOGIN</a>
                 <a class="fakebutton" href="../Cadastro e Login/dataCadastro.html">CADASTRE-SE</a>
             </div>
+
+            <div id="btnDashBoards">
+                <a class="BtnDash" id="BtnDash" href="../dashboards/dashprincipal.html"><img
+                        src="../assets/IconDash.png" alt="" style="height: 30px;"></a>
+                <a href=""></a>
+            </div>
+
         </div>
     </div>
     <!-- Início do Simulador -->
@@ -47,15 +56,15 @@
                 <button onclick="economizar()">Simular</button>
             </div>
         </div>
-        
+
         <!-- Caixa Direita -->
         <div class="box_d">
             <div class="resultado">
                 <p id="p_resultado">
-                    <p></p>
+                <p></p>
             </div>
         </div>
-        
+
     </div>
     <!-- Fim do Simulador -->
 
@@ -113,13 +122,14 @@
     </footer>
     <!-- fim do footer -->
 </body>
+
 </html>
 <script>
     function economizar() {
         p_resultado.innerHTML = ""
         var qtdRacks = Number(in_qtdRacks.value);
         var tier = sel_tiers.value;
-        
+
         if (qtdRacks != 0) {
             if (tier == 1 || tier == 2 || tier == 3 || tier == 4) {
                 var qtdArduino = Math.ceil(qtdRacks / 6);
@@ -136,4 +146,20 @@
             alert("Insira uma quantidade de Racks para podermos fazer a simulação")
         }
     }
+
+
+    var email = sessionStorage.EMAIL_USUARIO
+    var nome = sessionStorage.NOME_USUARIO
+
+    function logado() {
+        if (email == undefined && nome == undefined) {
+            btnDashBoards.innerHTML = ""
+            document.getElementById('BtnDash').style.visibility = 'hidden';
+        } else {
+            buttonslogcad.innerHTML = ""
+            document.getElementById('buttonslogcad').style.visibility = 'hidden';
+        }
+    }
+
+
 </script>
