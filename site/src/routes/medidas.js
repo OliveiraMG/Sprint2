@@ -11,4 +11,8 @@ router.get("/tempo-real/:idSensor", function (req, res) {
     medidaController.buscarMedidasEmTempoReal(req, res);
 })
 
+router.get("/umidade/:idSensor", function (req, res) {
+    medidaController.umidade(req, res);
+});
+
 module.exports = router;
