@@ -168,7 +168,15 @@ body {
     font-size: 20px;
 }
 
+<<<<<<< HEAD
 .dashGraphs {
+=======
+.dashSensorNavOpts img{
+    width: 25%;
+}
+
+.dashGraphs{
+>>>>>>> 8c54fdc95d546a46b238f62d34e456e5ad9d4c5b
     width: 85%;
     height: 95%;
     padding: 10px;
