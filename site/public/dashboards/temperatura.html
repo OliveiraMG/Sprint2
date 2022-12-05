@@ -142,52 +142,7 @@
       });
   }
 
-
-  function plotarGrafico(resposta, idSensor) {
-    // Criando estrutura para plotar gráfico - labels
-
-    var labels = [];
-
-    // Criando estrutura para plotar gráfico - dados
-    var dados = {
-      labels: labels,
-      datasets: [{
-        label: 'Temperatura',
-        data: [],
-        fill: false,
-        borderColor: 'rgb(92, 51, 23)',
-        backgroundColor: 'rgb(92, 51, 23)',
-        tension: 0.1
-
-      }]
-    };
-
-    // Inserindo valores recebidos em estrutura para plotar o gráfico
-    for (i = 0; i < resposta.length; i++) {
-      var registro = resposta[i];
-      // console.log("registros que vieram")
-      // console.log(registro)
-      labels.push(registro.hora);
-      dados.datasets[0].data.push(registro.temperaturaAtual); // VERIFICAR
-    }
-
-
-    // Criando estrutura para plotar gráfico - config
-    const config = {
-      type: 'line',
-      data: dados,
-      options: {
-        scales: {
-          y: {
-
-            borderColor: 'rgb(92, 51, 23)',
-            // showLine: true,
-
-          }
-<<<<<<< HEAD
-=======
           
-
     function plotarGrafico(resposta, idSensor) {
        // Criando estrutura para plotar gráfico - labels
 
@@ -300,16 +255,14 @@
         }else{
             document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
             sessionStorage.MODE_COLOR == 'light'
->>>>>>> 8c54fdc95d546a46b238f62d34e456e5ad9d4c5b
         }
-      }
-    };
+     
 
     var myChart = new Chart(
       document.getElementById('myChart'),
       config
     );
-  }
+  
 
 
 
