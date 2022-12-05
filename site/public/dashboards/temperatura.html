@@ -12,7 +12,7 @@
     <title>Dashboard - Temperatura</title>
   </head>
 
-  <body>
+  <body onload="darkmode()">
     <div class="dashHeader">
       <div class="dashNav">
         <div class="dashNavOpts">
@@ -90,6 +90,7 @@
 ></script>
 
 <script src="kpi.js"></script>
+
 
 
 
@@ -237,6 +238,17 @@
     //         });
 
     // }
+
+
+
+    if(sessionStorage.MODE_COLOR == 'dark'){
+            document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
+            sessionStorage.MODE_COLOR = 'dark' ;
+        }else{
+            document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
+            sessionStorage.MODE_COLOR == 'light'
+        }
+
 
 
 
