@@ -1,17 +1,19 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
     background-color: rgb(230, 230, 230);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.5s 0s linear ;
+
 }
 
 .umidade {
@@ -23,7 +25,7 @@ body{
 }
 
 /* DASHBOARD HEADER */
-.dashHeader{
+.dashHeader {
     height: 90%;
     width: 5%;
     display: flex;
@@ -31,7 +33,7 @@ body{
     justify-content: center;
 }
 
-.dashNav{
+.dashNav {
     height: 95%;
     width: 100%;
     background-color: #1B0140;
@@ -51,24 +53,53 @@ body{
     cursor: pointer;
 }
 
-.dashNavOpts{
+.dashNavOpts {
     height: 40%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .dashNavOpts a {
     width: 100%;
     text-align: center;
     margin-top: 30px;
 }
 
+.dashNavOptsdown {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.areabotaomododark {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 15px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.areabotaomododark div {
+    background-color: rgb(22, 186, 46);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    transition: all 2s 0s ease;
+
+
+}
+
 .dashNavOptsa:hover {
     border-left: solid 3px white;
 }
 
-.dashSensor{
+.dashSensor {
     height: 90%;
     width: 5%;
     display: flex;
@@ -78,7 +109,7 @@ body{
     position: relative;
 }
 
-.dashSensors{
+.dashSensors {
     height: 40px;
     width: 40px;
     background-color: #1B0140;
@@ -91,14 +122,14 @@ body{
     cursor: pointer;
 }
 
-.dashSensorsOpts ion-icon{
+.dashSensorsOpts ion-icon {
     color: white;
     font-size: 20px;
     margin-top: 3px;
 }
 
 
-.dashSensorNav{
+.dashSensorNav {
     height: 28%;
     width: 70%;
     background-color: #1B0140;
@@ -110,7 +141,7 @@ body{
     padding: 10px 0;
 }
 
-.dashSensorNavOpts{
+.dashSensorNavOpts {
     background-color: #472675;
     height: 30px;
     width: 30px;
@@ -123,7 +154,7 @@ body{
 
 }
 
-.dashSensorNavOpts a{
+.dashSensorNavOpts a {
     height: 100%;
     width: 100%;
     display: flex;
@@ -132,16 +163,16 @@ body{
 
 }
 
-.dashSensorNavOpts ion-icon{
+.dashSensorNavOpts ion-icon {
     color: white;
     font-size: 20px;
 }
 
-.dashGraphs{
+.dashGraphs {
     width: 85%;
     height: 95%;
     padding: 10px;
-    
+
 }
 
 .dashSensorOne {
@@ -151,7 +182,7 @@ body{
     border-radius: 10px;
     align-items: flex-end;
     background-color: rgb(190, 190, 190);
-    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455); 
+    box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
 }
 
 .dashSensorsInfo {
@@ -166,7 +197,7 @@ body{
     justify-content: center;
     flex-direction: column;
     background-color: #240155;
-    box-shadow: 0px 0px 10px 1px #1a013d; 
+    box-shadow: 0px 0px 10px 1px #1a013d;
 }
 
 .dashSensorsInfo h2 {
@@ -192,12 +223,13 @@ body{
     flex-direction: column;
     justify-content: center;
     background-color: #f1f1f1;
-    box-shadow: 0px 0px 15px 2px #272727; 
+    box-shadow: 0px 0px 15px 2px #272727;
 }
 
 .dashSensorsCurrentInfo h3 {
     font-size: 1.5rem;
 }
+
 .dashSensorsCurrentInfo p {
     font-size: 1.4rem;
 }
@@ -214,24 +246,24 @@ body{
     justify-content: center;
 }
 
-.alert{
+.alert {
     height: 60%;
     width: 50%;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     padding: 10px;
-    
+
 
 }
 
-.alert ion-icon{
+.alert ion-icon {
     position: relative;
     left: 96%;
     font-size: 25px;
     cursor: pointer;
 }
 
-.bluralert{
+.bluralert {
     backdrop-filter: blur(5px);
     position: absolute;
     height: 90%;
@@ -245,33 +277,33 @@ body{
     border-radius: 10px;
 }
 
-.areabutonssensores{
-    margin-top:5px ;
+.areabutonssensores {
+    margin-top: 5px;
     height: 90%;
     width: 100%;
     padding: 10px;
     display: flex;
 }
 
-.butsensores{
+.butsensores {
     margin-left: 10px;
     background-color: #330375;
-width: 110px;
-height: 30px;
-border-radius: 5px;
-display: flex;
-align-items: center;
-justify-content: center;
-color: white;
-cursor: pointer;
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
 }
 
-.butsensores:hover{
+.butsensores:hover {
     background-color: #240155;
 
 }
 
-.one{
+.one {
     height: 100%;
     width: 70%;
     border-radius: 10px;
@@ -281,7 +313,7 @@ cursor: pointer;
     justify-content: space-around;
 }
 
-.graphic1{
+.graphic1 {
     height: 48%;
     width: 100%;
     background-color: white;
@@ -290,10 +322,10 @@ cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.graphic2{
+.graphic2 {
     height: 46%;
     width: 100%;
     background-color: white;
@@ -305,11 +337,11 @@ cursor: pointer;
 
 }
 
-#graf2{
+#graf2 {
     display: none;
 }
 
-.two{
+.two {
     height: 100%;
     width: 30%;
     border-radius: 10px;
@@ -319,7 +351,7 @@ cursor: pointer;
     justify-content: space-around;
 }
 
-.dashSensorsInfo1{
+.dashSensorsInfo1 {
     height: 45%;
     width: 90%;
     background-color: white;
@@ -327,7 +359,7 @@ cursor: pointer;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
 }
 
-.dashSensorsInfo2{
+.dashSensorsInfo2 {
     height: 45%;
     width: 90%;
     background-color: white;
@@ -336,13 +368,10 @@ cursor: pointer;
 
 }
 
-.tm{
+.tm {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50%;
     width: 65%;
 }
-
-
-
