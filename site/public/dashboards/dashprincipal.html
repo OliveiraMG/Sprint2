@@ -30,7 +30,16 @@
         </a>
       </div>
 
-      <ion-icon name="person-circle-outline"></ion-icon>
+
+      <div class="dashNavOptsdown">
+
+        <div class="areabotaomododark" onclick="darkmode()">
+          <div id="botaomudarmode"></div>
+        </div>
+
+        <ion-icon name="person-circle-outline"></ion-icon>
+
+      </div>
     </div>
   </div>
 
@@ -57,7 +66,7 @@
   </div>
 
   <div class="box3">
-    <div class="one" onclick="darkmode()">
+    <div class="one">
       <div class="dashGraphSensorOne">
         <div class="blur"></div>
 
@@ -144,18 +153,23 @@
 
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
+
+      document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
       document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
       sessionStorage.MODE_COLOR = 'dark';
     } else {
+      document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
       document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
       sessionStorage.MODE_COLOR = 'light'
     }
   }
 
   if (sessionStorage.MODE_COLOR == 'dark') {
+    document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
     document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
     sessionStorage.MODE_COLOR = 'dark';
   } else {
+    document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
     document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
     sessionStorage.MODE_COLOR == 'light'
   }
