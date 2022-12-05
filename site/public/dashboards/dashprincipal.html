@@ -34,6 +34,8 @@
       <div class="dashNavOptsdown">
 
         <div class="areabotaomododark" onclick="darkmode()">
+          <ion-icon class="iconmodelight" name="sunny-outline"></ion-icon>
+          <ion-icon class="iconmodedark" name="moon-outline"></ion-icon>
           <div id="botaomudarmode"></div>
         </div>
 
@@ -154,65 +156,74 @@
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
 
+      document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(0 0 0 / 94%)';
       document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
       document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
+      document.querySelector('.tm h2').style.color = 'white';
       sessionStorage.MODE_COLOR = 'dark';
     } else {
+      document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(230, 230, 230)';
       document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
       document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
+      document.querySelector('.tm h2').style.color = 'black';
+
       sessionStorage.MODE_COLOR = 'light'
     }
   }
 
   if (sessionStorage.MODE_COLOR == 'dark') {
+    document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(0 0 0 / 94%)';
     document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
     document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
+    document.querySelector('.tm h2').style.color = 'white';
     sessionStorage.MODE_COLOR = 'dark';
   } else {
+    document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(230, 230, 230)';
     document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
     document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
+    document.querySelector('.tm h2').style.color = 'black';
     sessionStorage.MODE_COLOR == 'light'
   }
 
 
-function obterDados(idSensor){
+  function obterDados(idSensor) {
 
-  fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
-                if (response.ok) {
-                    response.json().then(function (resposta) {
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);    
-    
-                        // chamar função 
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-                .catch(function (error) {
-                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-                });
+    fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (resposta) {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-
-  fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
-                if (response.ok) {
-                    response.json().then(function (resposta) {
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-                .catch(function (error) {
-                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-                });
-
-              }
-function alertas(){
+          // chamar função 
+        });
+      } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+      }
+    })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
 
 
-  
-}
+    fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (resposta) {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+        });
+      } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+      }
+    })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+
+  }
+  function alertas() {
+
+
+
+  }
 
 
 </script>
