@@ -23,7 +23,7 @@ body {
     width: 100%;
 }
 
-.graphic1 {
+.dashGraphSensorOne {
     height: 90%;
     width: 100%;
     background-color: #8a8a8a2e;
@@ -76,7 +76,7 @@ body {
     margin-top: 50px;
 }
 
-.ping {
+.kpi {
     height: 20%;
     width: 100%;
     display: flex;
@@ -92,9 +92,9 @@ body {
     flex-direction: column;
 }
 
-.ping1green,
-.ping1red,
-.ping1yellow {
+.kpiGreen,
+.kpiRed,
+.kpiYellow {
     height: 50%;
     width: 16%;
     background-color: rgba(37, 37, 37, 0.318);
@@ -109,29 +109,29 @@ body {
     font-weight: bold;
 }
 
-.ping1red {
+.kpiRed {
     border-right: solid 5px  rgb(255, 0, 0);
 
     border-left: solid 5px  rgb(255, 0, 0);
     background-color: rgba(248, 248, 248, 0.963);
 }
 
-.ping1red #tituloP1 {
+.kpiRed #tituloP1 {
     font-size: 1.5rem;
     padding-top: 0%;
 }
 
-.ping1red #p1 {
+.kpiRed #p1 {
     margin-top: 0%;
 }
 
-.ping1yellow {
+.kpiYellow {
     border-right: solid 5px rgb(234, 255, 0);
     border-left: solid 5px rgb(234, 255, 0);
     background-color: rgba(248, 248, 248, 0.963) ;
 }
 
-.ping1green {
+.kpiGreen {
     border-right: solid 5px rgba(0, 255, 0, 0.959);
     border-left: solid 5px rgba(0, 255, 0, 0.959);
     background-color: rgba(248, 248, 248, 0.963);
@@ -140,15 +140,15 @@ body {
 
 
 
-.mingraphic1,
-.mingraphic2 {
+.dashSensorsInfo1,
+.dashSensorsInfo2 {
     box-shadow: none;
     background-color: transparent;
     border: none;
 }
 
 
-.blockup {
+.blockGraph {
     background-color: #1B0140;
     backdrop-filter: blur(10px);
     background-position: center;
@@ -301,7 +301,7 @@ body {
 }
 
 
-.mingraphic1 {
+.dashSensorsInfo1 {
     height: 75%;
     width: 25%;
     position: absolute;

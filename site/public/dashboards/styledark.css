@@ -151,7 +151,7 @@ body{
     justify-content: space-around;
 }
 
-.mingraphic1{
+.dashSensorsInfo1{
     height: 45%;
     width: 90%;
     background-color: rgb(29, 29, 29);
@@ -161,7 +161,7 @@ body{
     justify-content: center;
 }
 
-.mingraphic2{
+.dashSensorsInfo2{
     height: 45%;
     width: 90%;
     background-color: #5a09cc;
