@@ -34,6 +34,8 @@
       <div class="dashNavOptsdown">
 
         <div class="areabotaomododark" onclick="darkmode()">
+          <ion-icon class="iconmodelight" name="sunny-outline"></ion-icon>
+          <ion-icon class="iconmodedark" name="moon-outline"></ion-icon>
           <div id="botaomudarmode"></div>
         </div>
 
@@ -156,23 +158,32 @@ window.onload = obterDadosGrafico(1);
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
 
+      document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(0 0 0 / 94%)';
       document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
       document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
+      document.querySelector('.tm h2').style.color = 'white';
       sessionStorage.MODE_COLOR = 'dark';
     } else {
+      document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(230, 230, 230)';
       document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
       document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
+      document.querySelector('.tm h2').style.color = 'black';
+
       sessionStorage.MODE_COLOR = 'light'
     }
   }
 
   if (sessionStorage.MODE_COLOR == 'dark') {
+    document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(0 0 0 / 94%)';
     document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
     document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
+    document.querySelector('.tm h2').style.color = 'white';
     sessionStorage.MODE_COLOR = 'dark';
   } else {
+    document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(230, 230, 230)';
     document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
     document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
+    document.querySelector('.tm h2').style.color = 'black';
     sessionStorage.MODE_COLOR == 'light'
   }
 

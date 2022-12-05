@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "Thermodata",
     user: "root",
-    password: "melancia123",
+    password: "12345678",
 };
 
 function executar(instrucao) {

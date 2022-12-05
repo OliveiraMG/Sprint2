@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.5s 0s linear ;
+    transition: background-color 0.5s 0s linear;
 
 }
 
@@ -75,22 +75,47 @@ body {
 }
 
 .areabotaomododark {
-    background-color: whitesmoke;
-    width: 100%;
+    background-color: rgb(245, 245, 245);
+    width: 140%;
     height: 15px;
     border-radius: 30px;
     display: flex;
     justify-content: flex-start;
+    cursor: pointer;
+    position: relative;
+    right: 20%;
+
+}
+
+.areabotaomododark ion-icon {
+    position: absolute;
+    top: 8%;
+    height: 80%;
+}
+
+.areabotaomododark .iconmodelight {
+    left: 32%;
+    color: #0f0f0f;
+
+}
+
+.areabotaomododark .iconmodedark {
+    right: 32%;
+    color:  rgb(245, 245, 245);
 
 }
 
 .areabotaomododark div {
-    background-color: rgb(22, 186, 46);
+    background-color: rgb(123, 11, 243);
     width: 15px;
     height: 15px;
     border-radius: 50%;
     border: none;
     transition: all 2s 0s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    
 
 
 }
@@ -167,11 +192,12 @@ body {
     color: white;
     font-size: 20px;
 }
-.dashSensorNavOpts img{
+
+.dashSensorNavOpts img {
     width: 25%;
 }
 
-.dashGraphs{
+.dashGraphs {
     width: 85%;
     height: 95%;
     padding: 10px;
@@ -185,7 +211,7 @@ body {
     display: flex;
     border-radius: 10px;
     align-items: flex-end;
-    background-color: rgb(190, 190, 190);
+    background-color: #8a8a8a2e;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
 }
 
