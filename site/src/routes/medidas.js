@@ -12,4 +12,5 @@ router.get("/tempo-real/:idSensor", function (req, res) {
 })
 
 
+
 module.exports = router;

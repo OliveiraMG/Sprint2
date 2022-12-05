@@ -151,6 +151,8 @@
 
 <script>
 
+window.onload = obterDadosGrafico(1);
+
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
 
@@ -175,44 +177,81 @@
   }
 
 
-function obterDados(idSensor){
+  function obterDadosGrafico(idSensor) {
 
-  fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
-                if (response.ok) {
-                    response.json().then(function (resposta) {
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);    
-    
-                        // chamar função 
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-                .catch(function (error) {
-                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-                });
+    fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (resposta) {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
+          alertasUmidade(resposta, idSensor)
 
-  fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
-                if (response.ok) {
-                    response.json().then(function (resposta) {
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-                .catch(function (error) {
-                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-                });
-
-              }
-function alertas(){
+        });
+      } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+      }
+    })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
 
 
+    fetch(`/medidas/temperatura/1`, { cache: 'no-store' }).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (resposta) {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+          alertasTemperatura(resposta, idSensor)
+
+        });
+      } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+      }
+    })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+
+  }
+
+var alertaGeral = {alertaU: [], alertaT: []};
   
+function alertasUmidade(resposta, idSensor) {
+
+    var alertaU = []
+
+        for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+
+        console.log("registros que vieram")
+        console.log(registro)
+
+        alertaGeral.alertaU.push(registro.umidadeAtual);
+
+        console.log('dados do alerta Umidade')
+        console.log(alertaGeral)
+
+
+    }}
+
+
+    function alertasTemperatura(resposta, idSensor) {
+
+    var alertaT = []
+
+    for (i = 0; i < resposta.length; i++) {
+    var registro = resposta[i];
+
+    console.log("registros que vieram")
+    console.log(registro)
+
+    alertaGeral.alertaT.push(registro.temperaturaAtual);
+
+    console.log('dados do alerta Umidade')
+    console.log(alertaGeral)
+
 }
+  }
 
 
 </script>
