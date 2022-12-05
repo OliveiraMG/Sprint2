@@ -137,6 +137,10 @@ body{
     font-size: 20px;
 }
 
+.dashSensorNavOpts img{
+    width: 25%;
+}
+
 .dashGraphs{
     width: 85%;
     height: 95%;
