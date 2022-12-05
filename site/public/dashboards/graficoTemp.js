@@ -1,41 +1,41 @@
-// Começo grafico Temperatura 1
+// // Começo grafico Temperatura 1
 
-const horarioTemp = [
-  '12:30:00',
-  '12:45:00',
-  '13:00:00',
-  '14:15:00',
-  '14:30:00',
-  '14:45:00',
-  '15:00:00',
-];
+// const horarioTemp = [
+//   '12:30:00',
+//   '12:45:00',
+//   '13:00:00',
+//   '14:15:00',
+//   '14:30:00',
+//   '14:45:00',
+//   '15:00:00',
+// ];
 
-const dataTemp = {
-  labels: horarioTemp,
-  datasets: [{
-    label: 'Temperatura (°C)',
-    backgroundColor: 'rgba(255, 128, 0, 0.99)',
-    borderColor: 'rgba(255, 128, 0, 0.99)',
-    data: [27.3, 25.2, 24.1, 19.2, 21.2, 23.7, 18.1, 25.3, 19.9],
-  }]
-};
+// const dataTemp = {
+//   labels: horarioTemp,
+//   datasets: [{
+//     label: 'Temperatura (°C)',
+//     backgroundColor: 'rgba(255, 128, 0, 0.99)',
+//     borderColor: 'rgba(255, 128, 0, 0.99)',
+//     data: [27.3, 25.2, 24.1, 19.2, 21.2, 23.7, 18.1, 25.3, 19.9],
+//   }]
+// };
 
-const configTemp = {
-  type: 'line',
-  data: dataTemp,
-  options: {
-    responsive: true, // Para deixar responsivo com a div
-    maintainAspectRatio: false, // Código para desativar a proporção automática do gráfico
-  }
-};
+// const configTemp = {
+//   type: 'line',
+//   data: dataTemp,
+//   options: {
+//     responsive: true, // Para deixar responsivo com a div
+//     maintainAspectRatio: false, // Código para desativar a proporção automática do gráfico
+//   }
+// };
 
-const myChart2 = new Chart(
-  document.getElementById('graficoTemp'),
-  configTemp
-);
-// Termino Gráfico Temperatura 1
+// const myChart2 = new Chart(
+//   document.getElementById('graficoTemp'),
+//   configTemp
+// );
+// // Termino Gráfico Temperatura 1
 
-// Começo Gráfico Temperatura 2
+// // Começo Gráfico Temperatura 2
 const horarioTemp2 = [
   '12:15:00',
   '12:30:00',
@@ -47,30 +47,30 @@ const horarioTemp2 = [
   '15:00:00',
 ];
 
-const dataTemp2 = {
-  labels: horarioTemp2,
-  datasets: [{
-    label: 'Temperatura (°C)  Sensor 5',
-    backgroundColor: 'rgba(255, 128, 0, 0.99)',
-    borderColor: 'rgba(255, 128, 0, 0.99)',
-    data: [25.2, 24.1, 19.2, 21.2, 23.7, 18.1, 25.3, 19.9],
-  }]
-};
+// const dataTemp2 = {
+//   labels: horarioTemp2,
+//   datasets: [{
+//     label: 'Temperatura (°C)  Sensor 5',
+//     backgroundColor: 'rgba(255, 128, 0, 0.99)',
+//     borderColor: 'rgba(255, 128, 0, 0.99)',
+//     data: [25.2, 24.1, 19.2, 21.2, 23.7, 18.1, 25.3, 19.9],
+//   }]
+// };
 
-const configTemp2 = {
-  type: 'line',
-  data: dataTemp2,
-  options: {
-    responsive: true, // Para deixar responsivo com a div
-    maintainAspectRatio: false, // Código para desativar a proporção automática do gráfico
-  }
-};
+// const configTemp2 = {
+//   type: 'line',
+//   data: dataTemp2,
+//   options: {
+//     responsive: true, // Para deixar responsivo com a div
+//     maintainAspectRatio: false, // Código para desativar a proporção automática do gráfico
+//   }
+// };
 
-const myChart3 = new Chart(
-  document.getElementById('graficoTemp2'),
-  configTemp2
-);
-// Termino Gráfico Temperatura 2
+// const myChart3 = new Chart(
+//   document.getElementById('graficoTemp2'),
+//   configTemp2
+// );
+// // Termino Gráfico Temperatura 2
 
 
 
