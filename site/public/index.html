@@ -32,12 +32,12 @@
 
             </ul>
         </div>
-        <div class="buttonslogcad" id="buttonslogcad">
+        <div class="buttonslogcad" id="buttonslogcad" style="display: none;">
             <a class="fakebutton" href="Cadastro e Login/dataLogin.html">LOGIN</a>
             <a class="fakebutton" href="Cadastro e Login/dataCadastro.html">CADASTRE-SE</a>
         </div>
 
-        <div id="btnDashBoards">
+        <div id="btnDashBoards" style="display: none;">
                 <a class="BtnDash" id="BtnDash" href="dashboards/dashprincipal.html"><img src="./assets/IconDash.png" style="height: 30px;" alt=""></a>
         </div>
 
@@ -269,10 +269,12 @@
     function logado() {
         if (email == undefined && nome == undefined) {
             btnDashBoards.innerHTML = ""
-            document.getElementById('BtnDash').style.visibility = 'hidden';
+            document.getElementById('btnDashBoards').style.display = 'none';
+            document.getElementById('buttonslogcad').style.display = 'flex';
         } else {
             buttonslogcad.innerHTML = ""
-            document.getElementById('buttonslogcad').style.visibility = 'hidden';
+            document.getElementById('btnDashBoards').style.display = 'block';
+            document.getElementById('buttonslogcad').style.display = 'none';
         }
     }
 </script>
