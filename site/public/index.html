@@ -271,10 +271,15 @@
             btnDashBoards.innerHTML = ""
             document.getElementById('btnDashBoards').style.display = 'none';
             document.getElementById('buttonslogcad').style.display = 'flex';
+            document.querySelector('.manualdeinstalacao').style.display = 'none';
         } else {
             buttonslogcad.innerHTML = ""
             document.getElementById('btnDashBoards').style.display = 'block';
             document.getElementById('buttonslogcad').style.display = 'none';
+            document.querySelector('.manualdeinstalacao').style.display = 'flex';
+
         }
     }
+
+    sessionStorage.MODE_COLOR = 'light';
 </script>

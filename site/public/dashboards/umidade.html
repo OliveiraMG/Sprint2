@@ -13,7 +13,7 @@
     <title>Dashboard</title>
 </head>
 
-<body>
+<body >
 
     <div class="dashHeader">
         <div class="dashNav">
@@ -91,6 +91,8 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script src="kpi.js"></script>
+<script src="dark.js"></script>
+
 
 
 <script>
@@ -237,6 +239,18 @@
         //         });
     
         // }
+
+
+
+
+        if(sessionStorage.MODE_COLOR == 'dark'){
+            document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
+            sessionStorage.MODE_COLOR = 'dark' ;
+        }else{
+            document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
+            sessionStorage.MODE_COLOR == 'light'
+        }
+
     
     
     

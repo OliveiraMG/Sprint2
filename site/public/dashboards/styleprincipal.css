@@ -44,6 +44,7 @@ body {
 .blur {
     backdrop-filter: blur(100px);
     position: absolute;
+    top: 0;
     z-index: 0;
     height: 100%;
     width: 100%;
