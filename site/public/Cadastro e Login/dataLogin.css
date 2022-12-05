@@ -6,7 +6,6 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Oxanium', sans-serif;
-
 }
 
 body::-webkit-scrollbar-track {
@@ -27,6 +26,7 @@ body {
     background-image: url(../assets/BG_LOGIN.png);
     background-size: cover;
     backdrop-filter: blur(8px);
+    overflow: hidden;
 }
 
 .header {
