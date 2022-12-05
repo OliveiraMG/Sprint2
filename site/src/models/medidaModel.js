@@ -1,20 +1,18 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idSensor, limite_linhas) {
+function buscarUltimasMedidas(idSensor, limite_linhas, tipo) {
 
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `select top ${limite_linhas}
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,  
-                        momento,
-                        FORMAT(momento, 'HH:mm:ss') as momento_grafico
-                    from medida
-                    where fk_aquario = ${idAquario}
-                    order by id desc`;
+        metrica.${tipo}Atual, DATE_FORMAT(metrica.dtHora, '%H:%i:%s') as hora,
+        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor where idSensor = ${idSensor} 
+        order by idMetrica desc`;
+
+
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select metrica.temperaturaAtual, DATE_FORMAT(metrica.dtHora, '%H:%i:%s') as hora,
+        instrucaoSql = `select metrica.${tipo}Atual, DATE_FORMAT(metrica.dtHora, '%H:%i:%s') as hora,
         sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor where idSensor = ${idSensor} 
         order by idMetrica desc limit ${limite_linhas};`;
     } else {
