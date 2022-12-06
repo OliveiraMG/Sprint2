@@ -193,10 +193,19 @@ body {
     font-size: 20px;
 }
 
-.dashSensorNavOpts img {
+.dashSensorNavOpts img{
     width: 25%;
 }
 
+#umidade{
+
+    display: none;
+}
+
+#temperatura{
+    
+    display: none;
+}
 .dashGraphs {
     width: 85%;
     height: 95%;

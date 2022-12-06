@@ -51,7 +51,7 @@
         <a href="temperatura.html">
 
           <ion-icon name="thermometer-outline"></ion-icon>
-          <img src="assets/-GIF-Loading-Red-Spot-1--unscreen.gif" alt="">
+          <img id="temperatura" src="assets/-GIF-Loading-Red-Spot-1--unscreen.gif" alt="">
 
         </a>
       </div>
@@ -61,7 +61,7 @@
       <div class="dashSensorNavOpts">
         <a href="umidade.html">
           <ion-icon name="water-outline"></ion-icon>
-          <img src="assets/-GIF-Loading-Red-Spot-1--unscreen.gif" alt="">
+          <img id="umidade" src="assets/-GIF-Loading-Red-Spot-1--unscreen.gif" alt="">
         </a>
       </div>
     </div>
@@ -153,7 +153,7 @@
 
 <script>
 
-window.onload = obterDadosGrafico(1);
+  window.onload = obterDadosGrafico(1);
 
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
@@ -210,7 +210,7 @@ window.onload = obterDadosGrafico(1);
     fetch(`/medidas/temperatura/1`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
-          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          // console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
           alertasTemperatura(resposta, idSensor)
 
@@ -225,44 +225,72 @@ window.onload = obterDadosGrafico(1);
 
   }
 
-var alertaGeral = {alertaU: [], alertaT: []};
-  
-function alertasUmidade(resposta, idSensor) {
+  // var alertaGeral = {alertaU: [], alertaT: []};
 
-    var alertaU = []
+  function alertasUmidade(resposta, idSensor) {
 
-        for (i = 0; i < resposta.length; i++) {
-        var registro = resposta[i];
+    // var criticoUmidade = false
+    // var posicaoUmidade = 0
 
-        console.log("registros que vieram")
-        console.log(registro)
+    // var alertaU = []
 
-        alertaGeral.alertaU.push(registro.umidadeAtual);
+    // for (i = 0; i < resposta.length; i++) {
+    //   var registro = resposta[i];
 
-        console.log('dados do alerta Umidade')
-        console.log(alertaGeral)
+    //   console.log("registros que vieram")
+    //   console.log(registro)
+
+    //   alertaU.push(registro.umidadeAtual);
+
+    //   console.log('dados do alerta Umidade')
+    //   console.log(alertaU)
+      
+    //   if(alertaU[i] <= 47 || alertaU[i] >= 53) {
+    //     posicaoUmidade = i
+    //     criticoUmidade = true
+    //   }  
+
+    // }
+
+    // if (criticoUmidade) {
+    //   console.log("entrei no critico umidade")
+    //   umidade.style.display = "block"
+    // }
+
+  }
 
 
-    }}
-
-
-    function alertasTemperatura(resposta, idSensor) {
-
+  function alertasTemperatura(resposta, idSensor) {
+    var criticoTemperatura = false
+    var posicaoTemperatura = 0
     var alertaT = []
 
     for (i = 0; i < resposta.length; i++) {
-    var registro = resposta[i];
+      var registro = resposta[i];
 
-    console.log("registros que vieram")
-    console.log(registro)
+      console.log("registros que vieram")
+      console.log(registro)
 
-    alertaGeral.alertaT.push(registro.temperaturaAtual);
+      alertaT.push(registro.temperaturaAtual);
 
-    console.log('dados do alerta Umidade')
-    console.log(alertaGeral)
+      console.log('dados do alerta Temperatura')
+      console.log(alertaT)
 
-}
+      if(alertaT[i] <= 19.5 || alertaT[i] >= 25.5) {
+        console.log('ENTREI NO IF DO FOR')
+        console.log(i)
+        posicaoTemperatura = i
+        criticoTemperatura = true
+      }  
+
+    }
+
+    if (criticoTemperatura) {
+      console.log("entrei no critico temperatura")
+      temperatura.style.display = "block"
+    }
+
+
   }
-
 
 </script>
