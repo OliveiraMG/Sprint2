@@ -77,12 +77,12 @@ function obterDadosGrafico(idSensor) {
     })
 
         if(listaDeSensoresUmidade.length == 0){
-
+          legendaUmidade.innerHTML='Último Registro'
           exibirSensorUmidade.innerHTML = `Sensor ${registro.idSensor}`
           exibirUmidade.innerHTML = `${alertaU[posicaoUmidade]}ºC` 
 
         } else if (listaDeSensoresUmidade.length > 1){
-
+          legendaUmidade.innerHTML='Sensores em risco'
           for (let index = 0; index < listaDeSensoresUmidade.length; index++) {
             const element = listaDeSensoresUmidade[index];
     
@@ -91,7 +91,7 @@ function obterDadosGrafico(idSensor) {
           }
     
         }else{ 
-
+            legendaUmidade.innerHTML='Sensor em risco'
             exibirSensorUmidade.innerHTML = `Sensor ${listaDeSensoresUmidade}`
             exibirUmidade.innerHTML = `${alertaU[posicaoUmidade]}ºC`        
         }
@@ -137,13 +137,13 @@ function obterDadosGrafico(idSensor) {
 
     if(listaDeSensoresTemperatura.length == 0){
 
-      legendaUmidade.innerHTML='Ultimo Registro'
+      legendaTemperatura.innerHTML='Último Registro'
       exibirSensorUmidade.innerHTML = `Sensor ${registro.idSensor}`
       exibirUmidade.innerHTML = `${alertaT[posicaoTemperatura]}ºC` 
 
     } else if (listaDeSensoresTemperatura.length > 1){
 
-      legendaUmidade.innerHTML='Sensores com falha'
+      legendaTemperatura.innerHTML='Sensores em risco'
       for (let index = 0; index < listaDeSensoresTemperatura.length; index++) {
         const element = listaDeSensoresTemperatura[index];
 
@@ -151,7 +151,7 @@ function obterDadosGrafico(idSensor) {
       }
 
     } else {
-        legendaUmidade.innerHTML='Sensor com falha'
+        legendaTemperatura.innerHTML='Sensor em risco'
         exibirSensorTemperatura.innerHTML = `Sensor ${listaDeSensoresTemperatura}`
         exibirTemperatura.innerHTML = `${alertaT[posicaoTemperatura]}ºC`  
         console.log('ENTROU NO ELSE > MOSTRAR LISTA')
