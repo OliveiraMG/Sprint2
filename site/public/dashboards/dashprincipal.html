@@ -159,8 +159,8 @@
 
 
 <script>
-  
-  window.onload = obterDadosGrafico(1); 
+
+  window.onload = obterDadosGrafico(1);
 
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
@@ -196,93 +196,112 @@
 
 
   function obterDadosGrafico() {
-        // alterarTitulo(idSensor)
+    // alterarTitulo(idSensor)
 
-        // if (proximaAtualizacao != undefined) {
-        //     clearTimeout(proximaAtualizacao);
-        // }
-
-
-        fetch(`/medidas/metricas`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
+    // if (proximaAtualizacao != undefined) {
+    //     clearTimeout(proximaAtualizacao);
+    // }
 
 
+    fetch(`/medidas/metricas`, { cache: 'no-store' }).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (resposta) {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          resposta.reverse();
 
-                    plotarGraficoBarras(resposta);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
+
+
+          plotarGraficoBarras(resposta);
+        });
+      } else {
+        console.error('Nenhum dado encontrado ou erro na API');
+      }
+    })
+      .catch(function (error) {
+        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+
+  }
+
+  // function removeDuplicates(arr) {
+  //       return arr.filter((item,
+  //           index) => arr.indexOf(item) === index);
+  //   }
+
+  function plotarGraficoBarras(resposta) {
+    // Criando estrutura para plotar gráfico - labels
+
+
+    var labels2 = [];
+
+
+    var dados2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'Umidade',
+        fill: false,
+        data: [],
+        backgroundColor: 'rgba(0, 157, 255, 0.99)',
+        borderColor: 'rgba(0, 157, 255, 0.99)'
+
+      },
+      {
+        label: 'Temperatura',
+        fill: false,
+        data: [],
+        backgroundColor: ' rgba(255, 128, 0, 0.99)',
+        borderColor: ' rgba(255, 128, 0, 0.99)'
+      }]
+    }
+    // Inserindo valores recebidos em estrutura para plotar o gráfico
+
+    for (i = 0; i < resposta.length; i++) {
+      var registro = resposta[i];
+      console.log('DENTRO DO FOR DE PLOTAR')
+
+        
+
+      dados2.datasets[0].data.push(registro.umidadeAtual)
+      dados2.datasets[1].data.push(registro.temperaturaAtual)
+      labels2.push(registro.idSensor);
 
     }
 
+    // dados2.labels = removeDuplicates(labels2);
 
+    // Criando estrutura para plotar gráfico - config
+    const config = {
+      type: 'bar',
+      data: dados2,
+      options: {
+        scales: {
+          y: {
 
-    function plotarGraficoBarras(resposta) {
-        // Criando estrutura para plotar gráfico - labels
+            borderColor: 'rgba(0, 157, 255, 0.99)',
+            // showLine: true,
 
-      
-        var labels2 = [];
-
-        
-        var dados2 = {
-            labels: labels2,
-            datasets: [{
-                label: 'Umidade',
-                data: [],
-                backgroundColor: 'rgba(0, 157, 255, 0.99)',
-                borderColor: 'rgba(0, 157, 255, 0.99)'
-
-            },
-            {
-              label: 'Temperatura',
-              data: [],
-              backgroundColor: ' rgba(255, 128, 0, 0.99)',
-              borderColor: ' rgba(255, 128, 0, 0.99)'
-            }]
-    }
-    
-        };
-
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
-        
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            console.log('DENTRO DO FOR DE PLOTAR')
-
-            labels.push(registro.idSensor);
-            dados.datasets[0].data.push(registro.umidadeAtual); // VERIFICAR
+          }
         }
+      }
+    };
+
+    var myChart5 = new Chart(
+      document.getElementById('myChart5'),
+      config
+    );
 
 
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: dados,
-            options: {
-                scales: {
-                    y: {
 
-                        borderColor: 'rgba(0, 157, 255, 0.99)',
-                        // showLine: true,
 
-                    }
-                }
-            }
-        };
 
-        var myChart5 = new Chart(
-            document.getElementById('myChart5'),
-            config
-        );
-    
+
+
+
+  };
+
+
+
+
 
 
 
@@ -339,4 +358,3 @@
 
 
 </script>
-
