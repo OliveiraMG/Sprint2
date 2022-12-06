@@ -77,18 +77,24 @@ function obterDadosGrafico(idSensor) {
     })
 
         if(listaDeSensoresUmidade.length == 0){
+          legendaUmidade.innerHTML='Último Registro'
+          exibirSensorUmidade.innerHTML = `Sensor ${registro.idSensor}`
+          exibirUmidade.innerHTML = `${alertaU[posicaoUmidade]}ºC` 
 
-            exibirSensorUmidade.innerHTML = 'Sensores ok'
+        } else if (listaDeSensoresUmidade.length > 1){
+          legendaUmidade.innerHTML='Sensores em risco'
+          for (let index = 0; index < listaDeSensoresUmidade.length; index++) {
+            const element = listaDeSensoresUmidade[index];
+    
+            exibirSensorUmidade.innerHTML += `Sensor ${element}` 
 
-        } else{ 
-
+          }
+    
+        }else{ 
+            legendaUmidade.innerHTML='Sensor em risco'
             exibirSensorUmidade.innerHTML = `Sensor ${listaDeSensoresUmidade}`
             exibirUmidade.innerHTML = `${alertaU[posicaoUmidade]}ºC`        
         }
-
-
-    console.log('SENSOR DE UMIDADE COM PROBLEMA')
-    console.log(listaDeSensoresUmidade)
 
   }
 
@@ -124,7 +130,6 @@ function obterDadosGrafico(idSensor) {
       temperatura.style.display = "block"
     }
 
-    console.log("o sensor que deu bom")
 
     var listaDeSensoresTemperatura = idTemperatura.filter((element, index) => {
       return idTemperatura.indexOf(element) === index;
@@ -132,12 +137,25 @@ function obterDadosGrafico(idSensor) {
 
     if(listaDeSensoresTemperatura.length == 0){
 
-        exibirSensorTemperatura.innerHTML= 'Sensores ok'
+      legendaTemperatura.innerHTML='Último Registro'
+      exibirSensorUmidade.innerHTML = `Sensor ${registro.idSensor}`
+      exibirUmidade.innerHTML = `${alertaT[posicaoTemperatura]}ºC` 
+
+    } else if (listaDeSensoresTemperatura.length > 1){
+
+      legendaTemperatura.innerHTML='Sensores em risco'
+      for (let index = 0; index < listaDeSensoresTemperatura.length; index++) {
+        const element = listaDeSensoresTemperatura[index];
+
+        exibirSensorTemperatura.innerHTML += `Sensor ${element}` 
+      }
 
     } else {
-
+        legendaTemperatura.innerHTML='Sensor em risco'
         exibirSensorTemperatura.innerHTML = `Sensor ${listaDeSensoresTemperatura}`
         exibirTemperatura.innerHTML = `${alertaT[posicaoTemperatura]}ºC`  
+        console.log('ENTROU NO ELSE > MOSTRAR LISTA')
+        console.log(listaDeSensoresTemperatura.length)
     }
     
 
