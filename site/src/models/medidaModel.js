@@ -24,27 +24,41 @@ function buscarUltimasMedidas(idSensor, limite_linhas, tipo) {
     return database.executar(instrucaoSql);
 }
 
+
+function metricas() {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `select metrica.temperaturaAtual , metrica.umidadeAtual,
+        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
+
+
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select sensor.idSensor, metrica.temperaturaAtual , metrica.umidadeAtual
+        FROM metrica join sensor on metrica.fkSensor=sensor.idSensor group by sensor.idSensor;`;
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
+
 function buscarMedidasEmTempoReal(idSensor) {
 
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top 1
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,  
-                        CONVERT(varchar, momento, 108) as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
-                    order by id desc`;
+        instrucaoSql = `select metrica.temperaturaAtual , metrica.umidadeAtual,
+        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
-                    order by id desc limit 1`;
+        instrucaoSql = `        select metrica.temperaturaAtual , metrica.umidadeAtual,
+        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -57,5 +71,6 @@ function buscarMedidasEmTempoReal(idSensor) {
 
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
+    buscarMedidasEmTempoReal,
+    metricas
 }

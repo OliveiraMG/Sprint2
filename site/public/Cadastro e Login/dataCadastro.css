@@ -138,6 +138,29 @@ ul a:hover {
     background-size: cover;
     background-position: -33rem;
     border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tr div{
+    position: absolute;
+    height: 25%;
+    width: 80%;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.487);
+    
+}
+.tr div img{
+    width: 80px;
+    animation: blow 2s linear infinite alternate;
+    
 }
 
 .form h2{
@@ -316,4 +339,19 @@ span a:hover{
 .donw1 ion-icon {
     height: 30px;
     width: 30px;
+}
+
+@keyframes blow {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-4deg);
+        transform: scale(1.2);
+
+    }
+    100%{
+        transform: rotate(4deg);
+
+    }
 }

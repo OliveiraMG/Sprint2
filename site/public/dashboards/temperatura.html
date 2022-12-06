@@ -42,11 +42,12 @@
   </div>
 
   <div class="dashSensor">
-    <div class="dashSensors" onclick="abrir()">
+    <div class="dashSensors" onclick="selectSensors()">
       <div class="dashSensorsOpts">
         <ion-icon name="apps-outline"></ion-icon>
       </div>
     </div>
+
 
     <div class="dashSensorNav">
       <!-- Opt Temperatura -->
@@ -87,13 +88,24 @@
           <ion-icon name="thermometer-outline"></ion-icon>Min: 18.1 ºC
         </p>
         <div class="dashSensorsCurrentInfo">
+          <div id="legendaTemperatura"></div>
+          <p id="exibirTemperatura"></p>
           <h3 id="exibirSensorTemperatura"> </h3>
           <div id="temperatura"></div>
-          <p class="temperatura" id="exibirTemperatura"></p>
         </div>
       </div>
     </div>
   </div>
+
+  <div id="divSelectSensors" class="divSelectSensors">
+    <div id="divSelectSensorsOpts" class="divSelectSensorsOpts">
+      <button class="btnSelectSensor" id="btnSelectSensor1" name="btnSelectSensor" onclick="setSensor()" value="sensorOne">Sensor 1</button>
+      <button class="btnSelectSensor" id="btnSelectSensor2" name="btnSelectSensor" onclick="setSensor()" value="sensorTwo">Sensor 2</button>
+      <button class="btnSelectSensor" id="btnSelectSensor3" name="btnSelectSensor" onclick="setSensor()" value="sensorThree">Sensor 3</button>
+      <button class="btnSelectSensor" id="btnSelectSensor4" name="btnSelectSensor" onclick="setSensor()" value="sensorFour">Sensor 4</button>
+    </div>
+  </div>
+  
 </body>
 
 </html>
@@ -103,6 +115,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script src="kpi.js"></script>
+<script src="../js/funcoes.js"></script>
 
 
 
@@ -129,7 +142,7 @@
     //     clearTimeout(proximaAtualizacao);
     // }
 
-    fetch(`/medidas/temperatura/1`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/temperatura/idSensor`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -254,11 +267,6 @@
 
 
 
-
-
- 
-
-
   // function atualizarGrafico(idSensor, dados, myChart) {
 
   //     fetch(`/medidas/tempo-real/${idSensor}`, { cache: 'no-store' }).then(function (response) {
@@ -341,7 +349,10 @@
     sessionStorage.MODE_COLOR = 'light'
   }
 
+  function setSensor() {
+    var btnSensors = document.querySelectorAll(".btnSelectSensor")
 
-
+    console.log(btnSensors);
+  }
 
 </script>

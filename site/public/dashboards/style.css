@@ -206,6 +206,16 @@ body {
     
     display: none;
 }
+
+#legendaUmidade{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    color: #3b393d;
+    
+}
+
 .dashGraphs {
     width: 85%;
     height: 95%;
@@ -259,8 +269,30 @@ body {
     border-radius: 10px;
     flex-direction: column;
     justify-content: center;
-    background-color: #f1f1f1;
-    box-shadow: 0px 0px 15px 2px #272727;
+    background-color: red;
+    animation: alertTemp 1s infinite linear;
+}
+
+.dashSensorCurrentInfo:hover{
+    transition: .2 ease;
+    transform: scale(1.1);
+}
+
+#exibirTemperatura{
+    font-size: 30px;
+    color: #f1f1f1;
+}
+
+#exibirSensorTemperatura{
+    font-size: 20px;
+}
+
+#legendaTemperatura{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    color: white;    
 }
 
 .dashSensorsCurrentInfo h3 {
@@ -268,7 +300,7 @@ body {
 }
 
 .dashSensorsCurrentInfo p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 
@@ -402,7 +434,47 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+}
 
+.divSelectSensors {
+    top: 25%;
+    left: 10%;
+    width: 15%;
+    height: 15%;
+    display: flex;
+    padding: 10px;
+    position: fixed;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #240155;
+}
+
+.divSelectSensorsOpts {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnSelectSensor {
+    border: 0;
+    width: 63px;
+    height: 26px;
+    color: #1d1d1d;
+    font-weight: bold;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 250ms ease-in;
+    background-color: rgb(240, 240, 240);
+}
+
+.btnSelectSensor:hover {
+    transform: scale(.95);
+    transition: 250ms ease-out;
 }
 
 .tm {
@@ -411,4 +483,20 @@ body {
     justify-content: center;
     height: 50%;
     width: 65%;
+}
+
+
+@keyframes alertTemp{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        transform: rotate(2deg);
+        box-shadow: 0 0 50px #ff0000;
+    }
+    100%{
+        transform: rotate(-2deg);
+        box-shadow: 0;
+    }
+
 }
