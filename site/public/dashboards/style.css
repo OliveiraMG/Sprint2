@@ -434,7 +434,47 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgba(132, 132, 132, 0.455);
+}
 
+.divSelectSensors {
+    top: 25%;
+    left: 10%;
+    width: 15%;
+    height: 15%;
+    display: flex;
+    padding: 10px;
+    position: fixed;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #240155;
+}
+
+.divSelectSensorsOpts {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnSelectSensor {
+    border: 0;
+    width: 63px;
+    height: 26px;
+    color: #1d1d1d;
+    font-weight: bold;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 250ms ease-in;
+    background-color: rgb(240, 240, 240);
+}
+
+.btnSelectSensor:hover {
+    transform: scale(.95);
+    transition: 250ms ease-out;
 }
 
 .tm {

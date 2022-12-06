@@ -42,11 +42,12 @@
   </div>
 
   <div class="dashSensor">
-    <div class="dashSensors" onclick="abrir()">
+    <div class="dashSensors" onclick="selectSensors()">
       <div class="dashSensorsOpts">
         <ion-icon name="apps-outline"></ion-icon>
       </div>
     </div>
+
 
     <div class="dashSensorNav">
       <!-- Opt Temperatura -->
@@ -95,6 +96,16 @@
       </div>
     </div>
   </div>
+
+  <div id="divSelectSensors" class="divSelectSensors">
+    <div id="divSelectSensorsOpts" class="divSelectSensorsOpts">
+      <button class="btnSelectSensor" id="btnSelectSensor1" name="btnSelectSensor" onclick="setSensor()" value="sensorOne">Sensor 1</button>
+      <button class="btnSelectSensor" id="btnSelectSensor2" name="btnSelectSensor" onclick="setSensor()" value="sensorTwo">Sensor 2</button>
+      <button class="btnSelectSensor" id="btnSelectSensor3" name="btnSelectSensor" onclick="setSensor()" value="sensorThree">Sensor 3</button>
+      <button class="btnSelectSensor" id="btnSelectSensor4" name="btnSelectSensor" onclick="setSensor()" value="sensorFour">Sensor 4</button>
+    </div>
+  </div>
+  
 </body>
 
 </html>
@@ -104,6 +115,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script src="kpi.js"></script>
+<script src="../js/funcoes.js"></script>
 
 
 
@@ -337,7 +349,10 @@
     sessionStorage.MODE_COLOR = 'light'
   }
 
+  function setSensor() {
+    var btnSensors = document.querySelectorAll(".btnSelectSensor")
 
-
+    console.log(btnSensors);
+  }
 
 </script>
