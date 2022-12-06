@@ -47,7 +47,8 @@
                     <input type="password" id="in_password" placeholder="********">
                 </div>
                 <button onclick="entrar()">Entrar</button>
-                <div id="div_result"></div><br>
+                <div id="div_result" style="display:none;"> <b>Email ou senha</b> <b style="color:red;"> incorretos!! </b>
+                </div><br>
                 <span> Ainda não se cadastrou? <a href="dataCadastro.html">Clique aqui</a> </span>
 
             </div>
@@ -62,16 +63,27 @@
 <script>
 
     function entrar() {
-       // aguardar();
+        // aguardar();
 
         var emailVar = in_email.value;
         var senhaVar = in_password.value;
 
-        if (emailVar == "" || senhaVar == "") {
-           // cardErro.style.display = "block"
+        if (emailVar == "" && senhaVar == "") {
+            // cardErro.style.display = "block"
+            in_email.style.outline = "1px solid red";
+            in_password.style.outline = "1px solid red";
+            div_result.style.display = "block";
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             finalizarAguardar();
             return false;
+        }else if (emailVar == ""){ 
+            in_email.style.outline = "1px solid red";
+            div_result.style.display = "block";
+            mensagem_erro.innerHTML = "(Mensagem de erro para email em branco)";
+        }else if (senhaVar == ""){
+            in_password.style.outline = "1px solid red";
+            div_result.style.display = "block";
+            mensagem_erro.innerHTML = "(Mensagem de erro para senha em branco)";
         }
         else {
             setInterval(sumirMensagem, 5000)
@@ -104,13 +116,13 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "../dashboards/dashprincipal.html"; 
+                        window.location = "../dashboards/dashprincipal.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
 
             } else {
-
+                div_result.style.display = "block";
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
