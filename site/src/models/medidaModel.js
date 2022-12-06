@@ -35,8 +35,8 @@ function metricas() {
 
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select metrica.temperaturaAtual , metrica.umidadeAtual,
-        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
+        instrucaoSql = `select sensor.idSensor, metrica.temperaturaAtual , metrica.umidadeAtual
+        FROM metrica join sensor on metrica.fkSensor=sensor.idSensor group by sensor.idSensor;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -48,25 +48,25 @@ function metricas() {
 
 
 
-// function buscarMedidasEmTempoReal(idSensor) {
+function buscarMedidasEmTempoReal(idSensor) {
 
-//     instrucaoSql = ''
+    instrucaoSql = ''
 
-//     if (process.env.AMBIENTE_PROCESSO == "producao") {
-//         instrucaoSql = `select metrica.temperaturaAtual , metrica.umidadeAtual,
-//         sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
+    if (process.env.AMBIENTE_PROCESSO == "producao") {
+        instrucaoSql = `select metrica.temperaturaAtual , metrica.umidadeAtual,
+        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
 
-//     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-//         instrucaoSql = `        select metrica.temperaturaAtual , metrica.umidadeAtual,
-//         sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
-//     } else {
-//         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
-//         return
-//     }
+    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `        select metrica.temperaturaAtual , metrica.umidadeAtual,
+        sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
 
-//     console.log("Executando a instrução SQL: \n" + instrucaoSql);
-//     return database.executar(instrucaoSql);
-// }
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 
 module.exports = {
