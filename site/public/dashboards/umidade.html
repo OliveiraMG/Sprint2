@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleprincipal.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="alerta.js"></script>
     <title>Dashboard</title>
 </head>
 
@@ -88,8 +89,9 @@
                     <ion-icon name="water-outline"></ion-icon>Min: 18.1%
                 </p>
                 <div class="dashSensorsCurrentInfo">
-                    <h3>Sensor 1</h3>
-                    <p class="umidade">18.1 ºC</p>
+                    <h3 id="exibirSensorUmidade"> </h3>
+                    <div id="temperatura"></div>
+                    <p class="temperatura" id="exibirUmidade"></p>
                 </div>
             </div>
         </div>

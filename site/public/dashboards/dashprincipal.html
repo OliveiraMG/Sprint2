@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="styleprincipal.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="alerta.js"></script>
   <title>Dashboard</title>
 </head>
 
@@ -153,8 +154,6 @@
 
 <script>
 
-  window.onload = obterDadosGrafico(1);
-
   function darkmode() {
     if (sessionStorage.MODE_COLOR == 'light') {
 
@@ -187,110 +186,5 @@
     sessionStorage.MODE_COLOR == 'light'
   }
 
-
-  function obterDadosGrafico(idSensor) {
-
-    fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
-      if (response.ok) {
-        response.json().then(function (resposta) {
-          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-          alertasUmidade(resposta, idSensor)
-
-        });
-      } else {
-        console.error('Nenhum dado encontrado ou erro na API');
-      }
-    })
-      .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-      });
-
-
-    fetch(`/medidas/temperatura/1`, { cache: 'no-store' }).then(function (response) {
-      if (response.ok) {
-        response.json().then(function (resposta) {
-          // console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-          alertasTemperatura(resposta, idSensor)
-
-        });
-      } else {
-        console.error('Nenhum dado encontrado ou erro na API');
-      }
-    })
-      .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-      });
-
-  }
-
-
-
-  function alertasUmidade(resposta, idSensor) {
-
-    var criticoUmidade = false
-    var posicaoUmidade = 0
-
-    var alertaU = []
-
-    for (i = 0; i < resposta.length; i++) {
-      var registro = resposta[i];
-
-      console.log("registros que vieram")
-      console.log(registro)
-
-      alertaU.push(registro.umidadeAtual);
-
-      console.log('dados do alerta Umidade')
-      console.log(alertaU)
-      
-      if(alertaU[i] <= 47 || alertaU[i] >= 53) {
-        posicaoUmidade = i
-        criticoUmidade = true
-      }  
-
-    }
-
-    if (criticoUmidade) {
-      console.log("entrei no critico umidade")
-      umidade.style.display = "block"
-    }
-
-  }
-
-
-  function alertasTemperatura(resposta, idSensor) {
-    var criticoTemperatura = false
-    var posicaoTemperatura = 0
-    var alertaT = []
-
-    for (i = 0; i < resposta.length; i++) {
-      var registro = resposta[i];
-
-      console.log("registros que vieram")
-      console.log(registro)
-
-      alertaT.push(registro.temperaturaAtual);
-
-      console.log('dados do alerta Temperatura')
-      console.log(alertaT)
-
-      if(alertaT[i] <= 19.5 || alertaT[i] >= 25.5) {
-        console.log('ENTREI NO IF DO FOR')
-        console.log(i)
-        posicaoTemperatura = i
-        criticoTemperatura = true
-      }  
-
-    }
-
-    if (criticoTemperatura) {
-      console.log("entrei no critico temperatura")
-      temperatura.style.display = "block"
-    }
-
-
-  }
 
 </script>
