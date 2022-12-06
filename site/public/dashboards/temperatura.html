@@ -74,7 +74,7 @@
   <div class="dashGraphs">
     <div class="dashSensorOne">
       <div class="dashGraphSensorOne">
-        <h2>Gráfico de Temperatura - Sensor 1</h2>
+        <h2>Gráfico de Temperatura - Sensor <span id="numeroSensor"></span></h2>
 
         <canvas id="myChart"></canvas>
 
@@ -99,13 +99,17 @@
 
   <div id="divSelectSensors" class="divSelectSensors">
     <div id="divSelectSensorsOpts" class="divSelectSensorsOpts">
-      <button class="btnSelectSensor" id="btnSelectSensor1" name="btnSelectSensor" onclick="setSensor()" value="sensorOne">Sensor 1</button>
-      <button class="btnSelectSensor" id="btnSelectSensor2" name="btnSelectSensor" onclick="setSensor()" value="sensorTwo">Sensor 2</button>
-      <button class="btnSelectSensor" id="btnSelectSensor3" name="btnSelectSensor" onclick="setSensor()" value="sensorThree">Sensor 3</button>
-      <button class="btnSelectSensor" id="btnSelectSensor4" name="btnSelectSensor" onclick="setSensor()" value="sensorFour">Sensor 4</button>
+      <button class="btnSelectSensor" id="btnSelectSensor1" name="btnSelectSensor" onclick="obterDadosGrafico(1)"
+        value="sensorOne">Sensor 1</button>
+      <button class="btnSelectSensor" id="btnSelectSensor2" name="btnSelectSensor" onclick="obterDadosGrafico(2)"
+        value="sensorTwo">Sensor 2</button>
+      <button class="btnSelectSensor" id="btnSelectSensor3" name="btnSelectSensor" onclick="obterDadosGrafico(3)"
+        value="sensorThree">Sensor 3</button>
+      <button class="btnSelectSensor" id="btnSelectSensor4" name="btnSelectSensor" onclick="obterDadosGrafico(4)"
+        value="sensorFour">Sensor 4</button>
     </div>
   </div>
-  
+
 </body>
 
 </html>
@@ -130,19 +134,19 @@
 
   // verificar_autenticacao();
 
-  // function alterarTitulo(idSensor) {
-  //     var tituloAquario = document.getElementById("tituloAquario")
-  //     tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idSensor + "</span>"
-  // }
+  function alterarTitulo(idSensor) {
+      var tituloAquario = document.getElementById("numeroSensor")
+      tituloAquario.innerHTML = idSensor
+  }
 
   function obterDadosGrafico(idSensor) {
-    // alterarTitulo(idSensor)
+    alterarTitulo(idSensor)
 
     // if (proximaAtualizacao != undefined) {
     //     clearTimeout(proximaAtualizacao);
     // }
 
-    fetch(`/medidas/temperatura/idSensor`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/temperatura/${idSensor}`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -205,6 +209,12 @@
         }
       }
     };
+
+    let chartStatus = Chart.getChart("myChart");
+    
+    if (chartStatus != undefined) {
+      chartStatus.destroy();
+    }
 
     var myChart = new Chart(
       document.getElementById('myChart'),

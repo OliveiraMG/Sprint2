@@ -132,6 +132,7 @@
         // if (proximaAtualizacao != undefined) {
         //     clearTimeout(proximaAtualizacao);
         // }
+        
 
         fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
