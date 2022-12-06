@@ -89,9 +89,9 @@
         </p>
         <div class="dashSensorsCurrentInfo">
           <div id="legendaTemperatura"></div>
+          <p id="exibirTemperatura"></p>
           <h3 id="exibirSensorTemperatura"> </h3>
           <div id="temperatura"></div>
-          <p class="temperatura" id="exibirTemperatura"></p>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
     //     clearTimeout(proximaAtualizacao);
     // }
 
-    fetch(`/medidas/temperatura/1`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/temperatura/idSensor`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);

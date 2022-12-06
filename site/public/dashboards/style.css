@@ -216,15 +216,6 @@ body {
     
 }
 
-#legendaTemperatura{
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
-    font-weight: bold;
-    color: #3b393d;
-    
-}
-
 .dashGraphs {
     width: 85%;
     height: 95%;
@@ -278,8 +269,30 @@ body {
     border-radius: 10px;
     flex-direction: column;
     justify-content: center;
-    background-color: #f1f1f1;
-    box-shadow: 0px 0px 15px 2px #272727;
+    background-color: red;
+    animation: alertTemp 1s infinite linear;
+}
+
+.dashSensorCurrentInfo:hover{
+    transition: .2 ease;
+    transform: scale(1.1);
+}
+
+#exibirTemperatura{
+    font-size: 30px;
+    color: #f1f1f1;
+}
+
+#exibirSensorTemperatura{
+    font-size: 20px;
+}
+
+#legendaTemperatura{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    color: white;    
 }
 
 .dashSensorsCurrentInfo h3 {
@@ -470,4 +483,20 @@ body {
     justify-content: center;
     height: 50%;
     width: 65%;
+}
+
+
+@keyframes alertTemp{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        transform: rotate(2deg);
+        box-shadow: 0 0 50px #ff0000;
+    }
+    100%{
+        transform: rotate(-2deg);
+        box-shadow: 0;
+    }
+
 }

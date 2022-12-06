@@ -5,17 +5,17 @@ function obterDadosGrafico(idSensor) {
     fetch(`/medidas/umidade/1`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
-          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          // console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
           alertasUmidade(resposta, idSensor)
 
         });
       } else {
-        console.error('Nenhum dado encontrado ou erro na API');
+        // console.error('Nenhum dado encontrado ou erro na API');
       }
     })
       .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
       });
 
 
@@ -28,11 +28,11 @@ function obterDadosGrafico(idSensor) {
 
         });
       } else {
-        console.error('Nenhum dado encontrado ou erro na API');
+        // console.error('Nenhum dado encontrado ou erro na API');
       }
     })
       .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
       });
 
   }
@@ -49,13 +49,13 @@ function obterDadosGrafico(idSensor) {
     for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
 
-      console.log("registros que vieram")
-      console.log(registro)
+      // console.log("registros que vieram")
+      // console.log(registro)
 
       alertaU.push(registro.umidadeAtual);
 
-      console.log('dados do alerta Umidade')
-      console.log(alertaU)
+      // console.log('dados do alerta Umidade')
+      // console.log(alertaU)
 
       if (alertaU[i] <= 47 || alertaU[i] >= 53) {
         posicaoUmidade = i
@@ -66,11 +66,11 @@ function obterDadosGrafico(idSensor) {
     }
 
     if (criticoUmidade) {
-      console.log("entrei no critico umidade")
+      // console.log("entrei no critico umidade")
       umidade.style.display = "block"
     }
 
-    console.log("o sensor que deu bom Umidade ")
+    // console.log("o sensor que deu bom Umidade ")
 
     var listaDeSensoresUmidade = idUmidade.filter((element, index) => {
       return idUmidade.indexOf(element) === index;
@@ -108,13 +108,13 @@ function obterDadosGrafico(idSensor) {
     for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
 
-      console.log("registros que vieram")
-      console.log(registro)
+      // console.log("registros que vieram")
+      // console.log(registro)
 
       alertaT.push(registro.temperaturaAtual);
 
-      console.log('dados do alerta Temperatura')
-      console.log(alertaT)
+      // console.log('dados do alerta Temperatura')
+      // console.log(alertaT)
 
       if (alertaT[i] <= 19.5 || alertaT[i] >= 25.5) {
 
@@ -126,7 +126,7 @@ function obterDadosGrafico(idSensor) {
     }
 
     if (criticoTemperatura) {
-      console.log("entrei no critico temperatura")
+      // console.log("entrei no critico temperatura")
       temperatura.style.display = "block"
     }
 
@@ -154,8 +154,8 @@ function obterDadosGrafico(idSensor) {
         legendaTemperatura.innerHTML='Sensor em risco'
         exibirSensorTemperatura.innerHTML = `Sensor ${listaDeSensoresTemperatura}`
         exibirTemperatura.innerHTML = `${alertaT[posicaoTemperatura]}ºC`  
-        console.log('ENTROU NO ELSE > MOSTRAR LISTA')
-        console.log(listaDeSensoresTemperatura.length)
+        // console.log('ENTROU NO ELSE > MOSTRAR LISTA')
+        // console.log(listaDeSensoresTemperatura.length)
     }
     
 
