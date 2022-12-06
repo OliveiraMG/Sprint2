@@ -45,7 +45,7 @@
                 </div>
                 <div class="campo">
                     <label for="cnpj">CNPJ:</label>
-                    <input type="text " id="cnpj_empresa" placeholder="XX.XXX.XXX/0001-XX">
+                    <input type="text " id="cnpj_empresa" placeholder="XX.XXX.XXX/0001-XX" maxlength="14">
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
             <div class="campos">
                 <div class="campo">
                     <label for="cep">CEP:</label>
-                    <input id="cep_empresa" placeholder="XXXXX-XX">
+                    <input id="cep_empresa" placeholder="XXXXX-XX" maxlength="8">
                 </div>
 
                 <div class="campo">
@@ -81,7 +81,7 @@
 
                 <div class="campo">
                     <label for="telefone"> Telefone: </label>
-                    <input id="telefone_empresa" placeholder="(ddd)-99999-8888">
+                    <input id="telefone_empresa" placeholder="(ddd)-99999-8888" maxlength="11">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
 
                 <div class="campo">
                     <label for="senha">Senha:</label>
-                    <input type="password" id="senha_empresa" placeholder="************">
+                    <input type="password" id="senha_empresa" placeholder="************" maxlength="24">
                 </div>
             </div>
 
@@ -111,6 +111,10 @@
 
         </div>
         <div class="form tr">
+            <div>
+                <img src="../assets/iconalert.png" alt="">
+                <h3>Preencha todos os campos!</h3>
+            </div>
         </div>
     </div>
     </div>
@@ -176,27 +180,50 @@
     function cadastrar() {
         //aguardar();
 
-        var nomeVar = nome_empresa.value 
-        var cnpj = cnpj_empresa.value 
-        var logradouro = logradouro_empresa.value 
-        var bairro = bairro_empresa.value 
+        var nomeVar = nome_empresa.value
+        var cnpj = cnpj_empresa.value
+        var logradouro = logradouro_empresa.value
+        var bairro = bairro_empresa.value
         var cep = cep_empresa.value
-        var cidade = cidade_empresa.value 
-        var estado = estado_empresa.value 
-        var tel = telefone_empresa.value 
-        var emailVar = email_empresa.value 
-        var senhaVar = senha_empresa.value 
-        var confirmacaoSenhaVar = senhaCF_empresa.value 
-       
+        var cidade = cidade_empresa.value
+        var estado = estado_empresa.value
+        var tel = telefone_empresa.value
+        var emailVar = email_empresa.value
+        var senhaVar = senha_empresa.value
+        var confirmacaoSenhaVar = senhaCF_empresa.value
 
-        if (nomeVar == '' || cnpj == '' || logradouro == '' || bairro == '' || cep == '' || cidade == '' || estado == '' || tel == '' || emailVar == '' || senhaVar == '' || confirmacaoSenhaVar == '') {
+        var alertadeinvalido = document.querySelector('.tr div')
+
+        nomeVar.length == '' || nomeVar.length < 14 ? nome_empresa.style.outlineColor = "red" : nome_empresa.style.outlineColor = "black"
+        cnpj.length == '' || cnpj.length < 14 ? cnpj_empresa.style.outlineColor = "red" : cnpj_empresa.style.outlineColor = "black"
+        logradouro.length == '' ? logradouro_empresa.style.outlineColor = "red" : logradouro_empresa.style.outlineColor = "black"
+        bairro.length == '' ? bairro_empresa.style.outlineColor = "red" : bairro_empresa.style.outlineColor = "black"
+        cep.length == '' || cep.length < 8 ? cep_empresa.style.outlineColor = "red" : cep_empresa.style.outlineColor = "black"
+        cidade.length == '' ? cidade_empresa.style.outlineColor = "red" : cidade_empresa.style.outlineColor = "black"
+        estado.length == '' ? estado_empresa.style.outlineColor = "red" : estado_empresa.style.outlineColor = "black"
+        tel.length == '' || tel.length < 11 ? telefone_empresa.style.outlineColor = "red" : telefone_empresa.style.outlineColor = "black"
+        emailVar.length == '' ? email_empresa.style.outlineColor = "red" : email_empresa.style.outlineColor = "black"
+        senhaVar.length == '' ? senha_empresa.style.outlineColor = "red" : senha_empresa.style.outlineColor = "black"
+        confirmacaoSenhaVar.length == '' || confirmacaoSenhaVar.length != senhaVar.length ? senhaCF_empresa.style.outlineColor = "red" : senhaCF_empresa.style.outlineColor = "black"
+
+
+
+
+
+        if (nomeVar == '' && cnpj == '' && logradouro == '' && bairro == '' && cep == '' && cidade == '' && estado == '' && tel == '' && emailVar == '' && senhaVar == '' && confirmacaoSenhaVar == '') {
             //cardErro.style.display = "block"
+            alertadeinvalido.style.display = 'flex'
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
             finalizarAguardar();
             return false;
         }
-        else {
+        else if (nomeVar == '' || cnpj == '' || logradouro == '' || bairro == '' || cep == '' || cidade == '' || estado == '' || tel == '' || emailVar == '' || senhaVar == '' || confirmacaoSenhaVar == '') {
+            alertadeinvalido.style.display = 'flex'
+            finalizarAguardar();
+            return false;
+
+        } else {
             setInterval(sumirMensagem, 5000)
         }
 
@@ -214,9 +241,9 @@
                 logradouroServer: logradouro,
                 bairroServer: bairro,
                 cepServer: cep,
-                cidadeServer:cidade,
+                cidadeServer: cidade,
                 estadoServer: estado,
-                telServer: tel,                
+                telServer: tel,
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
@@ -227,20 +254,20 @@
             if (resposta.ok) {
                 //cardErro.style.display = "block";
 
-               // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
                     window.location = "dataLogin.html";
                 }, "2000")
-                
-               // limparFormulario();
+
+                // limparFormulario();
                 //finalizarAguardar();
             } else {
-                    
+
                 throw (`Houve um erro ao tentar realizar o cadastro!`);
             }
         }).catch(function (resposta) {
-            
+
             console.log(`#ERRO: ${resposta}`);
             //finalizarAguardar();
         });
