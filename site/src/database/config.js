@@ -6,7 +6,7 @@ var sqlServerConfig = {
     server: "SEU_SERVIDOR",
     database: "SEU_BANCO_DE_DADOS",
     user: "SEU_USUARIO",
-    password: "SUA_SENHA",
+    password: "melancia123",
     pool: {
         max: 10,
         min: 0,
@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "Thermodata",
     user: "root",
-    password: "SUA_SENHA",
+    password: "melancia123",
 };
 
 function executar(instrucao) {
