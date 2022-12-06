@@ -225,37 +225,37 @@
 
   }
 
-  // var alertaGeral = {alertaU: [], alertaT: []};
+
 
   function alertasUmidade(resposta, idSensor) {
 
-    // var criticoUmidade = false
-    // var posicaoUmidade = 0
+    var criticoUmidade = false
+    var posicaoUmidade = 0
 
-    // var alertaU = []
+    var alertaU = []
 
-    // for (i = 0; i < resposta.length; i++) {
-    //   var registro = resposta[i];
+    for (i = 0; i < resposta.length; i++) {
+      var registro = resposta[i];
 
-    //   console.log("registros que vieram")
-    //   console.log(registro)
+      console.log("registros que vieram")
+      console.log(registro)
 
-    //   alertaU.push(registro.umidadeAtual);
+      alertaU.push(registro.umidadeAtual);
 
-    //   console.log('dados do alerta Umidade')
-    //   console.log(alertaU)
+      console.log('dados do alerta Umidade')
+      console.log(alertaU)
       
-    //   if(alertaU[i] <= 47 || alertaU[i] >= 53) {
-    //     posicaoUmidade = i
-    //     criticoUmidade = true
-    //   }  
+      if(alertaU[i] <= 47 || alertaU[i] >= 53) {
+        posicaoUmidade = i
+        criticoUmidade = true
+      }  
 
-    // }
+    }
 
-    // if (criticoUmidade) {
-    //   console.log("entrei no critico umidade")
-    //   umidade.style.display = "block"
-    // }
+    if (criticoUmidade) {
+      console.log("entrei no critico umidade")
+      umidade.style.display = "block"
+    }
 
   }
 
