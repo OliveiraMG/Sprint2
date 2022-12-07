@@ -38,7 +38,7 @@
     </div>
 
     <div class="dashSensor">
-      <div class="dashSensors" onclick="abrir()">
+      <div class="dashSensors" onclick="selectSensors()">
         <div class="dashSensorsOpts">
           <ion-icon name="apps-outline"></ion-icon>
         </div>
@@ -108,6 +108,7 @@
 
     <div id="divSelectSensors" class="divSelectSensors" style="display: none;">
       <div id="divSelectSensorsOpts" class="divSelectSensorsOpts">
+        <ion-icon name="close" onclick="limparSensors()"></ion-icon>
         <button
           class="btnSelectSensor"
           id="btnSelectSensor1"
@@ -115,7 +116,7 @@
           onclick="setSensor(1)"
         >
           Sensor 1
-        </button>
+        </button><br>
         <button
           class="btnSelectSensor"
           id="btnSelectSensor2"
@@ -123,7 +124,7 @@
           onclick="setSensor(2)"
         >
           Sensor 2
-        </button>
+        </button><br>
         <button
           class="btnSelectSensor"
           id="btnSelectSensor3"
@@ -131,7 +132,7 @@
           onclick="setSensor(3)"
         >
           Sensor 3
-        </button>
+        </button><br>
         <button
           class="btnSelectSensor"
           id="btnSelectSensor4"

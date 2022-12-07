@@ -56,3 +56,8 @@ function selectSensors() {
     var divSensors = document.getElementById("divSelectSensors")
     divSensors.style.display = "flex"
 }
+
+function limparSensors() {
+    var divSensors = document.getElementById("divSelectSensors")
+    divSensors.style.display = "none"
+}

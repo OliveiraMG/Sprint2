@@ -450,8 +450,8 @@ body {
 .divSelectSensors {
     top: 25%;
     left: 10%;
-    width: 10%;
-    height: 15%;
+    width: 15%;
+    height: 25;
     display: flex;
     padding: 10px;
     position: fixed;
@@ -467,8 +467,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+}
+
+.divSelectSensorsOpts ion-icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 9.5rem;
+    cursor: pointer;
 }
 
 .btnSelectSensor {
