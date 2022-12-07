@@ -459,7 +459,17 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #240155;
+    animation: go-back 1s;
 }
+
+@keyframes go-back {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+} 
 
 .divSelectSensorsOpts {
     width: 95%;
