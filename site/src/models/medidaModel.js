@@ -8,13 +8,13 @@ function buscarUltimasMedidas(idSensor, limite_linhas, tipo) {
         instrucaoSql = `select top ${limite_linhas}
         metrica.${tipo}Atual, DATE_FORMAT(metrica.dtHora, '%H:%i:%s') as hora,
         sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor where idSensor = ${idSensor} 
-        order by idMetrica desc`;
+        order by idMetrica`;
 
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select metrica.${tipo}Atual, DATE_FORMAT(metrica.dtHora, '%H:%i:%s') as hora,
         sensor.idSensor FROM metrica join sensor on metrica.fkSensor=sensor.idSensor where idSensor = ${idSensor} 
-        order by idMetrica desc limit ${limite_linhas};`;
+        order by idMetrica limit ${limite_linhas};`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
