@@ -81,7 +81,7 @@
 
                 <div class="campo">
                     <label for="telefone"> Telefone: </label>
-                    <input id="telefone_empresa" placeholder="(ddd)-99999-8888" maxlength="11">
+                    <input id="telefone_empresa" placeholder="(11)-99999-8888" maxlength="11">
                 </div>
             </div>
 
@@ -103,6 +103,7 @@
                     <input type="password" id="senhaCF_empresa" placeholder="************">
                 </div>
                 <div class="campo">
+                    <div class="mensagemSenha" style="display:none;"></div>
                     <button onclick="cadastrar()">Registre-se</button>
                 </div>
 
@@ -113,7 +114,7 @@
         <div class="form tr">
             <div>
                 <img src="../assets/iconalert.png" alt="">
-                <h3>Preencha todos os campos!</h3>
+                <h3 id="alternar">Preencha todos os campos!</h3>
             </div>
         </div>
     </div>
@@ -223,6 +224,11 @@
             finalizarAguardar();
             return false;
 
+        }else if (senhaVar !== confirmacaoSenhaVar){
+            alertadeinvalido.style.display = 'flex'
+            alternar.innerHTML = "Senha incorreta"
+            finalizarAguardar();
+            return false;
         } else {
             setInterval(sumirMensagem, 5000)
         }
