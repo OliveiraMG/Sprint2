@@ -8,38 +8,9 @@ function obterDadosGrafico(idSensor) {
         console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
         resposta.reverse();
 
-<<<<<<< HEAD
         alertasUmidade(resposta, idSensor)
         alertasTemperatura(resposta, idSensor)        
    
-=======
-          alertasUmidade(resposta, idSensor)
-
-        });
-      } else {
-        // console.error('Nenhum dado encontrado ou erro na API');
-      }
-    })
-      .catch(function (error) {
-        // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-      });
-
-
-    fetch(`/medidas/temperatura/`, { cache: 'no-store' }).then(function (response) {
-      if (response.ok) {
-        response.json().then(function (resposta) {
-          // console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-          alertasTemperatura(resposta, idSensor)
-
-        });
-      } else {
-        // console.error('Nenhum dado encontrado ou erro na API');
-      }
-    })
-      .catch(function (error) {
-        // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
->>>>>>> fc6309db67727197df46dcba8fc7c2c60130c411
       });
     } else {
       console.error('Nenhum dado encontrado ou erro na API');
@@ -195,7 +166,9 @@ function obterDadosGrafico(idSensor) {
 
     if(listaDeSensoresTemperatura.length == 0){
       
-      legendaTemperatura.innerHTML='Último Registro'
+      if (legendaTemperatura != null){
+        legendaTemperatura.innerHTML='Último Registro'
+      }
 
       if( exibirSensorTemperatura !=  null) {
         exibirSensorTemperatura.innerHTML = `Sensor ${registro.idSensor}`
@@ -217,9 +190,8 @@ function obterDadosGrafico(idSensor) {
       for (let index = 0; index < listaDeSensoresTemperatura.length; index++) {
         const element = listaDeSensoresTemperatura[index];
         
-
         if( exibirSensorTemperatura !=  null) {
-          exibirSensorTemperatura.innerHTML = `Sensor ${element}`
+          exibirSensorTemperatura.innerHTML += `Sensor ${element}<br>`
         }
       }
 
