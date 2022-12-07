@@ -36,7 +36,7 @@ function metricas() {
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select sensor.idSensor, metrica.temperaturaAtual , metrica.umidadeAtual
-        FROM metrica join sensor on metrica.fkSensor=sensor.idSensor group by sensor.idSensor;`;
+        FROM metrica join sensor on metrica.fkSensor=sensor.idSensor;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
