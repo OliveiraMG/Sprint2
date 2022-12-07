@@ -223,10 +223,13 @@
 
   }
 
-  // function removeDuplicates(arr) {
-  //       return arr.filter((item,
-  //           index) => arr.indexOf(item) === index);
-  //   }
+  function removeDuplicates(arr) {
+        return arr.filter((item,
+            index) => arr.indexOf(item) === index);
+    }
+
+
+
 
   function plotarGraficoBarras(resposta) {
     // Criando estrutura para plotar gráfico - labels
@@ -267,7 +270,7 @@
 
     }
 
-    // dados2.labels = removeDuplicates(labels2);
+    dados2.labels = removeDuplicates(labels2);
 
     // Criando estrutura para plotar gráfico - config
     const config = {
