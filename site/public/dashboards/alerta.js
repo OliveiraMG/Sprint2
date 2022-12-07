@@ -19,7 +19,7 @@ function obterDadosGrafico(idSensor) {
       });
 
 
-    fetch(`/medidas/temperatura/1`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/temperatura/`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
           // console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);

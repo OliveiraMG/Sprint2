@@ -72,11 +72,29 @@
   </div>
 
   <div class="dashGraphs">
-    <div class="dashSensorOne">
-      <div class="dashGraphSensorOne">
+    <div class="dashGraphsSensors" id="sensorGraphs">
+      <div class="putDisplayFlex" id="sensorGraph1">
         <h2>Gráfico de Temperatura - Sensor 1</h2>
 
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart1"></canvas>
+
+      </div>
+      <div class="putDisplayNone" id="sensorGraph2">
+        <h2>Gráfico de Temperatura - Sensor 2</h2>
+
+        <canvas id="myChart2"></canvas>
+
+      </div>
+      <div class="putDisplayNone" id="sensorGraph3">
+        <h2>Gráfico de Temperatura - Sensor 3</h2>
+
+        <canvas id="myChart3"></canvas>
+
+      </div>
+      <div class="putDisplayNone" id="sensorGraph4">
+        <h2>Gráfico de Temperatura - Sensor 4</h2>
+
+        <canvas id="myChart4"></canvas>
 
       </div>
       <div class="dashSensorsInfo">
@@ -99,10 +117,10 @@
 
   <div id="divSelectSensors" class="divSelectSensors">
     <div id="divSelectSensorsOpts" class="divSelectSensorsOpts">
-      <button class="btnSelectSensor" id="btnSelectSensor1" name="btnSelectSensor" onclick="setSensor()" value="sensorOne">Sensor 1</button>
-      <button class="btnSelectSensor" id="btnSelectSensor2" name="btnSelectSensor" onclick="setSensor()" value="sensorTwo">Sensor 2</button>
-      <button class="btnSelectSensor" id="btnSelectSensor3" name="btnSelectSensor" onclick="setSensor()" value="sensorThree">Sensor 3</button>
-      <button class="btnSelectSensor" id="btnSelectSensor4" name="btnSelectSensor" onclick="setSensor()" value="sensorFour">Sensor 4</button>
+      <button class="btnSelectSensor" id="btnSelectSensor1" name="btnSelectSensor" onclick="setSensor(1)">Sensor 1</button>
+      <button class="btnSelectSensor" id="btnSelectSensor2" name="btnSelectSensor" onclick="setSensor(2)">Sensor 2</button>
+      <button class="btnSelectSensor" id="btnSelectSensor3" name="btnSelectSensor" onclick="setSensor(3)">Sensor 3</button>
+      <button class="btnSelectSensor" id="btnSelectSensor4" name="btnSelectSensor" onclick="setSensor(4)">Sensor 4</button>
     </div>
   </div>
   
@@ -126,7 +144,7 @@
 
   //     let proximaAtualizacao;
 
-  window.onload = obterDadosGrafico(1);
+  window.onload = obterDadosGraficos();
 
   // verificar_autenticacao();
 
@@ -135,6 +153,13 @@
   //     tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idSensor + "</span>"
   // }
 
+  function obterDadosGraficos() {
+    obterDadosGrafico(1);
+    obterDadosGrafico(2);
+    obterDadosGrafico(3);
+    obterDadosGrafico(4);
+  }
+
   function obterDadosGrafico(idSensor) {
     // alterarTitulo(idSensor)
 
@@ -142,7 +167,7 @@
     //     clearTimeout(proximaAtualizacao);
     // }
 
-    fetch(`/medidas/temperatura/idSensor`, { cache: 'no-store' }).then(function (response) {
+    fetch(`/medidas/temperatura/${idSensor}`, { cache: 'no-store' }).then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -207,7 +232,7 @@
     };
 
     var myChart = new Chart(
-      document.getElementById('myChart'),
+      document.getElementById(`myChart${idSensor}`),
       config
     );
   }
@@ -324,13 +349,13 @@
       document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(0 0 0 / 94%)';
       document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
       document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
-      document.querySelector('.dashGraphSensorOne h2').style.color = 'white';
+      document.querySelector('.dashGraphsSensors h2').style.color = 'white';
       sessionStorage.MODE_COLOR = 'dark';
     } else {
       document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(230, 230, 230)';
       document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
       document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
-      document.querySelector('.dashGraphSensorOne h2').style.color = 'black';
+      document.querySelector('.dashGraphsSensors h2').style.color = 'black';
       sessionStorage.MODE_COLOR = 'light'
     }
   }
@@ -339,20 +364,30 @@
     document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(0 0 0 / 94%)';
     document.querySelector('.areabotaomododark').style.justifyContent = "flex-end";
     document.querySelector('body').style.backgroundColor = 'rgb(0 0 0 / 94%)';
-    document.querySelector('.dashGraphSensorOne h2').style.color = 'white';
+    document.querySelector('.dashGraphsSensors h2').style.color = 'white';
     sessionStorage.MODE_COLOR = 'dark';
   } else {
     document.querySelector('.areabotaomododark').style.backgroundColor = 'rgb(230, 230, 230)';
     document.querySelector('.areabotaomododark').style.justifyContent = "flex-start";
     document.querySelector('body').style.backgroundColor = 'rgb(230, 230, 230)';
-    document.querySelector('.dashGraphSensorOne h2').style.color = 'black';
+    document.querySelector('.dashGraphsSensors h2').style.color = 'black';
     sessionStorage.MODE_COLOR = 'light'
   }
 
-  function setSensor() {
-    var btnSensors = document.querySelectorAll(".btnSelectSensor")
+  function setSensor(idSensor) {
+   let allSensorGraphs = document.getElementById("sensorGraphs")
 
-    console.log(btnSensors);
+   for (let i = 1; i < allSensorGraphs.childElementCount; i++) {
+    let currentSensor = document.getElementById(`sensorGraph${i}`)
+    if (currentSensor.classList.contains("putDisplayFlex")) {
+      currentSensor.classList.remove("putDisplayFlex")
+    }
+    currentSensor.classList.add("putDisplayNone")
+   }
+
+   let showGraph = document.getElementById(`sensorGraph${idSensor}`)
+    showGraph.classList.remove("putDisplayNone")
+    showGraph.classList.add("putDisplayFlex")
   }
 
 </script>
