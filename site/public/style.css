@@ -312,6 +312,11 @@ ul a:hover {
     padding: 2rem;
 }
 
+.caixas:hover{
+    box-shadow: 0px 0px 20px #350381;
+
+}
+
 .caixas img {
     width: 50%;
     margin-bottom: 1rem;
